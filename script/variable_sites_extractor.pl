@@ -1,4 +1,8 @@
 #!/usr/bin/env perl
+
+# Copyright (c) 2020 Hikoyu Suzuki
+# This script is released under the MIT License.
+
 use strict;
 use warnings;
 use List::Util 'min', 'max', 'sum', 'reduce';
@@ -30,17 +34,21 @@ while (my $line = <BED>) {
 close(BED);
 
 my @sample_list = ();
+my $ref_id = undef;
 my $sample_list_file = shift(@ARGV);
 open(LIST, "<", $sample_list_file) or die "Failed to open the sample list file: $sample_list_file\n";
 while (my $line = <LIST>) {
 	next if $line =~ /^["#"]/;
+	$ref_id = @sample_list if $line =~ /^["!"]/ and !defined($ref_id);
 	chomp($line);
 	push(@sample_list, $line);
 }
 close(LIST);
 
-my $ref = $sample_list[0];
-die "Reference sequence: $ref not found in the BED file: $bed_file\n" if !exists($ref_start_pos{$ref});
+die "Reference sequence not defined\n" unless defined($ref_id);
+$sample_list[$ref_id] =~ s/!//g;
+my $ref = $sample_list[$ref_id];
+die "Reference sequence: $ref not found in the BED file: $bed_file\n" unless exists($ref_start_pos{$ref});
 
 print STDERR "Reference sequence: $ref\n";
 
@@ -50,20 +58,20 @@ my %parsimony_informative_sites = ();
 while (my $line = <>) {
 	chomp($line);
 	my @col = split(/\t/, $line);
-	die "Target sequence: $col[0] not found in the BED file: $bed_file\n" if !exists($ref_start_pos{$ref}{$col[0]});
+	die "Target sequence: $col[0] not found in the BED file: $bed_file\n" unless exists($ref_start_pos{$ref}{$col[0]});
 	
 	my $id = "";
 	my %seq = ();
 	open(FASTA, "<", $col[1]) or die "Failed to open the FASTA file; $col[1]\n";
 	while (my $line = <FASTA>) {
 		chomp($line);
-		$id = substr($line, 1) and $seq{$id} = "" or next if $line =~ /^>/;
+		$id = substr($line, 1, index("$line:", ":") - 1) and $seq{$id} = "" or next if $line =~ /^>/;
 		$seq{$id} .= uc($line);
 	}
 	close(FASTA);
 	
-	die "Reference sequence: $ref not found in the FASTA file: $col[1]\n" if !exists($seq{$ref});
-	foreach (@sample_list) {die "Sequence: $_ not found in FASTA file: $col[1]\n" if !exists($seq{$_});}
+	die "Reference sequence: $ref not found in the FASTA file: $col[1]\n" unless exists($seq{$ref});
+	foreach (@sample_list) {die "Sequence: $_ not found in FASTA file: $col[1]\n" unless exists($seq{$_});}
 	die "Sequences in the FASTA file: $col[1] do not appear to be aligned\n" unless reduce {$a == $b ? $a : 0} map {length($_)} values(%seq);
 	
 	my $pos = $ref_start_pos{$ref}{$col[0]};
@@ -85,9 +93,20 @@ while (my $line = <>) {
 @pickup_sites = sort {$a <=> $b} grep {exists($variable_sites{$ref}{$_})} @pickup_sites;
 die "No ", $detection_type ? "variable" : "parsimony-informative", " sites found", -f $detection_type ? " in the site position list file: $detection_type\n" : "\n" unless @pickup_sites;
 
-my %match_score = ();
+unless (-f $detection_type) {
+	my $position_list_file = $detection_type ? "variable_site_position_list.txt" : "parsimony-informative_site_position_list.txt";
+	open(POSITION_LIST, ">", $position_list_file) or die "Failed to make file: $position_list_file\n";
+	foreach my $pos (@pickup_sites) {
+		print POSITION_LIST $pos, "\n";
+	}
+	close(POSITION_LIST);
+}
+
+my %match_score1 = ();
+my %match_score2 = ();
 foreach my $id (@sample_list) {
-	$match_score{$id} = sum(map {$mismatch_penalties{$_} * ($variable_sites{$id}{$_} ne $variable_sites{$ref}{$_})} keys(%parsimony_informative_sites));
+	$match_score1{$id} = sum(map {$mismatch_penalties{$_} * ($variable_sites{$id}{$_} ne $variable_sites{$ref}{$_})} keys(%parsimony_informative_sites));
+	$match_score2{$id} = sum(map {$mismatch_penalties{$_} * ($variable_sites{$id}{$_} ne $variable_sites{$ref}{$_})} keys(%{$variable_sites{$ref}}));
 }
 
 my $longest_sample_name_len = max(map {length($_)} keys(%variable_sites));
@@ -96,6 +115,7 @@ for (my $i = 0;$i < length($pickup_sites[-1]);$i++) {
 }
 print "-" x ($longest_sample_name_len + @pickup_sites + offset), "\n";
 print $ref, " " x ($longest_sample_name_len - length($ref) + offset), join("", map {$variable_sites{$ref}{$_}} @pickup_sites), "\n";
-foreach my $id (sort {$match_score{$b} <=> $match_score{$a} || $a cmp $b} grep {$_ ne $ref} @sample_list) {
+foreach my $id (sort {$match_score1{$b} <=> $match_score1{$a} || $match_score2{$b} <=> $match_score2{$a} || $a cmp $b} grep {$_ ne $ref} @sample_list) {
 	print $id, " " x ($longest_sample_name_len - length($id) + offset), join("", map {$variable_sites{$id}{$_} eq $variable_sites{$ref}{$_} ? "." : $variable_sites{$id}{$_}} grep {exists($variable_sites{$ref}{$_})} @pickup_sites), "\n";
 }
+exit;

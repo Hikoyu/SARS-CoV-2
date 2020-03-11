@@ -1,4 +1,8 @@
 #!/usr/bin/env perl
+
+# Copyright (c) 2020 Hikoyu Suzuki
+# This script is released under the MIT License.
+
 use strict;
 use warnings;
 
@@ -33,3 +37,4 @@ while (my $line = <>) {
 	$pos -= 3;
 }
 print $aa, "\n" if defined($aa);
+exit;

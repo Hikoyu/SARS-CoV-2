@@ -1,0 +1,89 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 11-Mar-2020 02:23:47 as follows:
+
+raxml-ng --threads 1 --parse --prefix phylogeny/RAxML-NG/DNA/univ/sep/SARS-CoV-2_200311 --msa phylogeny/SARS-CoV-2_200311.aln.concat.fna --msa-format FASTA --data-type DNA --model phylogeny/ModelTest-NG/DNA/univ/sep/SARS-CoV-2_200311.part.bic
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1583861027
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: NONE/sequential
+
+[00:00:00] Reading alignment from file: phylogeny/SARS-CoV-2_200311.aln.concat.fna
+[00:00:00] Loaded alignment with 64 taxa and 29145 sites
+
+WARNING: Sequences LC522974.1 and LC522975.1 are exactly identical!
+WARNING: Sequences LR757995.1 and MT066175.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN908947.3 are exactly identical!
+WARNING: Sequences LR757996.1 and MN988668.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN988669.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN996528.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN996530.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT019530.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT019532.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT039873.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT093631.1 are exactly identical!
+WARNING: Sequences MN985325.1 and MT020880.1 are exactly identical!
+WARNING: Sequences MN985325.1 and MT020881.1 are exactly identical!
+WARNING: Sequences MT027062.1 and MT027063.1 are exactly identical!
+WARNING: Sequences MT135041.1 and MT135042.1 are exactly identical!
+WARNING: Sequences MT135041.1 and MT135044.1 are exactly identical!
+WARNING: Duplicate sequences found: 16
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/univ/sep/SARS-CoV-2_200311.raxml.reduced.phy
+
+NOTE: The corresponding reduced partition file was saved to:
+/home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/univ/sep/SARS-CoV-2_200311.raxml.reduced.partition
+
+Alignment comprises 3 partitions and 298 patterns
+
+Partition 0: p1
+Model: GTR+FO+G4m+B
+Alignment sites / patterns: 9715 / 79
+Gaps: 0.05 %
+Invariant sites: 93.02 %
+
+Partition 1: p2
+Model: HKY+FO+I+B
+Alignment sites / patterns: 9715 / 98
+Gaps: 0.05 %
+Invariant sites: 96.29 %
+
+Partition 2: p3
+Model: GTR+FO+I+G4m+B
+Alignment sites / patterns: 9715 / 121
+Gaps: 0.05 %
+Invariant sites: 68.22 %
+
+
+NOTE: Binary MSA file created: phylogeny/RAxML-NG/DNA/univ/sep/SARS-CoV-2_200311.raxml.rba
+
+* Estimated memory requirements                : 4 MB
+
+* Recommended number of threads / MPI processes: 1
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/univ/sep/SARS-CoV-2_200311.raxml.log
+
+Analysis started: 11-Mar-2020 02:23:47 / finished: 11-Mar-2020 02:23:47
+
+Elapsed time: 0.077 seconds
+
