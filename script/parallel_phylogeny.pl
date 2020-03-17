@@ -83,7 +83,7 @@ for (my $i = 0;$i < $num_chunks;$i++) {
 my $thread_fin_flag = 1;
 $input->end;
 for (my $thread_id = 0;$thread_id < $num_threads;$thread_id++) {$thread_fin_flag = $threads[$thread_id]->join if $thread_fin_flag;}
-die "Worker threads abnormally exited\n" unless $thread_fin_flag;
+map {$_->detach} threads->list or die "Worker threads abnormally exited\n" unless $thread_fin_flag;
 $output->end;
 $threads[$num_threads]->join or die "Data merge thread abnormally exited\n";
 
@@ -120,7 +120,7 @@ for (my $i = 0;$i < $num_chunks;$i++) {
 
 $input->end;
 for (my $thread_id = 0;$thread_id < $num_threads;$thread_id++) {$thread_fin_flag = $threads[$thread_id]->join if $thread_fin_flag;}
-die "Worker threads abnormally exited\n" unless $thread_fin_flag;
+map {$_->detach} threads->list or die "Worker threads abnormally exited\n" unless $thread_fin_flag;
 $output->end;
 $threads[$num_threads]->join or die "Data merge thread abnormally exited\n";
 
@@ -138,7 +138,7 @@ move("$dir/$data_type/$analysis_prefix.raxml.log", "$dir/$data_type/$analysis_pr
 @final_loglikelihood = map {substr($_, rindex($_, " ") + 1)} @final_loglikelihood;
 my $best_tree_id = reduce {$final_loglikelihood[$a] > $final_loglikelihood[$b] ? $a : $b} (0..$num_chunks - 1);
 print STDERR "Best Tree: $dir/$data_type/$analysis_prefix.$best_tree_id.raxml.bestTree\n";
-print STDERR "$final_loglikelihood[$best_tree_id]\n";
+print STDERR "Final LogLikelihood: $final_loglikelihood[$best_tree_id]\n";
 print STDERR "$aic_score[$best_tree_id]\n";
 print STDERR "$aicc_score[$best_tree_id]\n";
 print STDERR "$bic_score[$best_tree_id]\n";

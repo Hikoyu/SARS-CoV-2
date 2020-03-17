@@ -1,0 +1,44 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 18-Mar-2020 01:05:26 as follows:
+
+raxml-ng --threads 1 --bsconverge --bs-trees phylogeny/RAxML-NG/AA/part/SARS-CoV-2_200314.raxml.bootstraps --prefix phylogeny/RAxML-NG/AA/part/SARS-CoV-2_200314 --outgroup MG772933.1
+
+Analysis options:
+  run mode: A posteriori bootstrap convergence test
+  start tree(s): 
+  random seed: 1584461126
+  SIMD kernels: AVX2
+  parallelization: NONE/sequential
+
+Reading bootstrap trees from file: phylogeny/RAxML-NG/AA/part/SARS-CoV-2_200314.raxml.bootstraps
+Loaded 1000 trees with 89 taxa.
+
+Performing bootstrap convergence assessment using autoMRE criterion
+
+ # trees        avg WRF       avg WRF in %       # perms: wrf <= 3.00 %     converged?  
+      50        209.156              6.841                            0        NO
+     100        316.271              5.122                            0        NO
+     150        403.239              4.316                            0        NO
+     200        442.251              3.552                           72        NO
+     250        509.359              3.280                          211        NO
+     300        565.143              3.031                          470        NO
+     350        603.389              2.745                          768        NO
+     400        685.021              2.701                          840        NO
+     450        717.297              2.511                          942        NO
+     500        766.283              2.404                          980        NO
+     550        816.452              2.320                          999        YES
+Bootstopping test converged after 550 trees
+
+
+Execution log saved to: /home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/AA/part/SARS-CoV-2_200314.raxml.log
+
+Analysis started: 18-Mar-2020 01:05:26 / finished: 18-Mar-2020 01:07:26
+
+Elapsed time: 120.366 seconds
+

@@ -6,11 +6,11 @@
 #########################
 # Settings for analyses #
 #########################
-analysis_prefix="SARS-CoV-2_200311"
+analysis_prefix="SARS-CoV-2_200314"
 orf_reference_prefix="ref/MN908947.orf"
 genome_sequence_file="genome/$analysis_prefix.fna"
 ref_sample="MN908947"
-excluded_samples="LR757997,MN988713,MT020781,MT039888"
+excluded_samples="LR757997,MN988713,MT020781,MT039888,MT066156,MT163721"
 num_threads=4
 
 
