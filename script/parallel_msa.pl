@@ -59,7 +59,7 @@ while (my $line = <>) {
 my $thread_fin_flag = 1;
 $input->end;
 for (my $thread_id = 0;$thread_id < $num_threads;$thread_id++) {$thread_fin_flag = $threads[$thread_id]->join if $thread_fin_flag;}
-die "Worker threads abnormally exited\n" unless $thread_fin_flag;
+map {$_->detach} threads->list or die "Worker threads abnormally exited\n" unless $thread_fin_flag;
 $output->end;
 $threads[$num_threads]->join or die "Data merge thread abnormally exited\n";
 exit;

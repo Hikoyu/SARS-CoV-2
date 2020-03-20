@@ -1,0 +1,1530 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.6
+
+Input data:
+  MSA:        phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            74
+  #sites:           9716
+  #patterns (sum):  743
+  Max. thread mem:  38 MB
+
+Output:
+  Log:           phylogeny/ModelTest-NG/AA/part/SARS-CoV-2_200318.log
+  Starting tree: phylogeny/ModelTest-NG/AA/part/SARS-CoV-2_200318.tree
+  Results:       phylogeny/ModelTest-NG/AA/part/SARS-CoV-2_200318.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          4/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+Partitions:    phylogeny/ModelTest-NG/AA/part/SARS-CoV-2_200318.part.txt
+               11 partitions
+                 11 protein partitions
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HIVB+I+F          20    -14849.6001     31214.1526         0.0000    0.8687
+       2  HIVB+I+G4+F       21    -14847.4046     31218.9431         4.7905    0.0792
+       3  HIVB+G4+F         20    -14852.4133     31219.7790         5.6265    0.0521
+       4  FLU+I+F           20    -14861.2988     31237.5500        23.3974    0.0000
+       5  FLU+G4+F          20    -14862.5324     31240.0171        25.8645    0.0000
+       6  FLU+I+G4+F        21    -14859.0554     31242.2446        28.0921    0.0000
+       7  JTT-DCMUT+I+F     20    -14873.8091     31262.5704        48.4179    0.0000
+       8  JTT-DCMUT+G4+F    20    -14874.1258     31263.2039        49.0513    0.0000
+       9  JTT+I+F           20    -14874.2702     31263.4926        49.3401    0.0000
+      10  JTT+G4+F          20    -14874.5811     31264.1146        49.9620    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HIVB+I+F
+lnL:                -14849.6001
+Frequencies:        0.0699 0.0298 0.0530 0.0479 0.0314 0.0343 0.0543 0.0598 0.0170 0.0489 0.0988 0.0627 0.0239 0.0471 0.0373 0.0668 0.0784 0.0105 0.0443 0.0841
+Inv. sites prop:    0.8323
+Gamma shape:        -
+Score:              31214.1526
+Weight:             0.8687
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.8687
+Gamma:              0.0521
+Gamma-Inv:          0.0792
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8323
+Alpha:              0.0220
+Alpha-P.Inv:        0.8556
+P.Inv-Alpha:        0.6915
+Frequencies:        0.0699 0.0298 0.0530 0.0479 0.0314 0.0343 0.0543 0.0598 0.0170 0.0489 0.0988 0.0627 0.0239 0.0471 0.0373 0.0668 0.0784 0.0105 0.0443 0.0841 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m HIVB -f e -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAIHIVBF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model HIVB+I+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m HIVB+I+F
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HIVB+I+G4+F       21    -14847.4046     30026.8092         0.0000    0.7572
+       2  HIVB+I+F          20    -14849.6001     30029.2002         2.3910    0.2291
+       3  HIVB+G4+F         20    -14852.4133     30034.8267         8.0175    0.0137
+       4  FLU+I+G4+F        21    -14859.0554     30050.1108        23.3016    0.0000
+       5  FLU+I+F           20    -14861.2988     30052.5977        25.7884    0.0000
+       6  FLU+G4+F          20    -14862.5324     30055.0648        28.2555    0.0000
+       7  JTT-DCMUT+I+G4+F   21    -14871.8106     30075.6212        48.8119    0.0000
+       8  JTT+I+G4+F        21    -14872.2699     30076.5398        49.7305    0.0000
+       9  JTT-DCMUT+I+F     20    -14873.8091     30077.6181        50.8089    0.0000
+      10  JTT-DCMUT+G4+F    20    -14874.1258     30078.2515        51.4423    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HIVB+I+G4+F
+lnL:                -14847.4046
+Frequencies:        0.0699 0.0298 0.0530 0.0479 0.0314 0.0343 0.0543 0.0598 0.0170 0.0489 0.0988 0.0627 0.0239 0.0471 0.0373 0.0668 0.0784 0.0105 0.0443 0.0841
+Inv. sites prop:    0.6915
+Gamma shape:        0.8556
+Score:              30026.8092
+Weight:             0.7572
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2291
+Gamma:              0.0137
+Gamma-Inv:          0.7572
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8323
+Alpha:              0.0220
+Alpha-P.Inv:        0.8556
+P.Inv-Alpha:        0.6915
+Frequencies:        0.0699 0.0298 0.0530 0.0479 0.0314 0.0343 0.0543 0.0598 0.0170 0.0489 0.0988 0.0627 0.0239 0.0471 0.0373 0.0668 0.0784 0.0105 0.0443 0.0841 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m HIVB -f e -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAIHIVBF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model HIVB+I+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m HIVB+I+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HIVB+I+G4+F       21    -14847.4046     30031.8092         0.0000    0.7572
+       2  HIVB+I+F          20    -14849.6001     30034.2002         2.3910    0.2291
+       3  HIVB+G4+F         20    -14852.4133     30039.8267         8.0175    0.0137
+       4  FLU+I+G4+F        21    -14859.0554     30055.1108        23.3016    0.0000
+       5  FLU+I+F           20    -14861.2988     30057.5977        25.7884    0.0000
+       6  FLU+G4+F          20    -14862.5324     30060.0648        28.2555    0.0000
+       7  JTT-DCMUT+I+G4+F   21    -14871.8106     30080.6212        48.8119    0.0000
+       8  JTT+I+G4+F        21    -14872.2699     30081.5398        49.7305    0.0000
+       9  JTT-DCMUT+I+F     20    -14873.8091     30082.6181        50.8089    0.0000
+      10  JTT-DCMUT+G4+F    20    -14874.1258     30083.2515        51.4423    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HIVB+I+G4+F
+lnL:                -14847.4046
+Frequencies:        0.0699 0.0298 0.0530 0.0479 0.0314 0.0343 0.0543 0.0598 0.0170 0.0489 0.0988 0.0627 0.0239 0.0471 0.0373 0.0668 0.0784 0.0105 0.0443 0.0841
+Inv. sites prop:    0.6915
+Gamma shape:        0.8556
+Score:              30031.8092
+Weight:             0.7572
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2291
+Gamma:              0.0137
+Gamma-Inv:          0.7572
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8323
+Alpha:              0.0220
+Alpha-P.Inv:        0.8556
+P.Inv-Alpha:        0.6915
+Frequencies:        0.0699 0.0298 0.0530 0.0479 0.0314 0.0343 0.0543 0.0598 0.0170 0.0489 0.0988 0.0627 0.0239 0.0471 0.0373 0.0668 0.0784 0.0105 0.0443 0.0841 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m HIVB -f e -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAIHIVBF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model HIVB+I+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m HIVB+I+G4+F
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+I        1     -9001.2878     19343.0788         0.0000    0.3811
+       2  JTT-DCMUT+G4       1     -9001.5703     19343.6439         0.5651    0.2873
+       3  JTT-DCMUT+I+G4     2     -8997.5219     19344.7287         1.6499    0.1670
+       4  JTT+I              1     -9003.4417     19347.3866         4.3078    0.0442
+       5  JTT+G4             1     -9003.7290     19347.9613         4.8825    0.0332
+       6  JTT-DCMUT+I+F     20     -8916.9629     19348.8782         5.7994    0.0210
+       7  JTT+I+G4           2     -8999.6785     19349.0418         5.9629    0.0193
+       8  JTT-DCMUT+G4+F    20     -8917.2793     19349.5110         6.4322    0.0153
+       9  JTT+I+F           20     -8917.6714     19350.2952         7.2164    0.0103
+      10  JTT-DCMUT+I+G4+F   21     -8913.1913     19350.5165         7.4377    0.0092
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JTT-DCMUT+I
+lnL:                -9001.2878
+Frequencies:        0.0769 0.0511 0.0425 0.0513 0.0203 0.0411 0.0618 0.0747 0.0230 0.0526 0.0911 0.0595 0.0234 0.0405 0.0505 0.0682 0.0585 0.0143 0.0323 0.0664
+Inv. sites prop:    0.8402
+Gamma shape:        -
+Score:              19343.0788
+Weight:             0.3811
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4566
+Gamma:              0.3433
+Gamma-Inv:          0.2001
+Frequencies:        0.0679
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8402
+Alpha:              0.0212
+Alpha-P.Inv:        1.0000
+P.Inv-Alpha:        0.7337
+Frequencies:        0.0664 0.0419 0.0560 0.0660 0.0327 0.0327 0.0375 0.0553 0.0260 0.0475 0.0865 0.0586 0.0234 0.0527 0.0408 0.0601 0.0675 0.0119 0.0519 0.0846 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAIJTT-DCMUT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+I
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+I+G4+F   21     -8913.1913     18158.3827         0.0000    0.6054
+       2  JTT+I+G4+F        21     -8913.9043     18159.8086         1.4259    0.2967
+       3  JTT-DCMUT+I+F     20     -8916.9629     18163.9258         5.5432    0.0379
+       4  JTT-DCMUT+G4+F    20     -8917.2793     18164.5586         6.1760    0.0276
+       5  JTT+I+F           20     -8917.6714     18165.3429         6.9602    0.0186
+       6  JTT+G4+F          20     -8917.9812     18165.9624         7.5797    0.0137
+       7  HIVB+I+G4+F       21     -8922.5180     18177.0361        18.6534    0.0001
+       8  FLU+I+G4+F        21     -8923.1698     18178.3397        19.9570    0.0000
+       9  MTMAM+I+G4+F      21     -8925.3390     18182.6781        24.2954    0.0000
+      10  HIVB+I+F          20     -8926.4653     18182.9305        24.5478    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              JTT-DCMUT+I+G4+F
+lnL:                -8913.1913
+Frequencies:        0.0664 0.0419 0.0560 0.0660 0.0327 0.0327 0.0375 0.0553 0.0260 0.0475 0.0865 0.0586 0.0234 0.0527 0.0408 0.0601 0.0675 0.0119 0.0519 0.0846
+Inv. sites prop:    0.7337
+Gamma shape:        1.0000
+Score:              18158.3827
+Weight:             0.6054
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0565
+Gamma:              0.0413
+Gamma-Inv:          0.9022
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8402
+Alpha:              0.0212
+Alpha-P.Inv:        1.0000
+P.Inv-Alpha:        0.7337
+Frequencies:        0.0664 0.0419 0.0560 0.0660 0.0327 0.0327 0.0375 0.0553 0.0260 0.0475 0.0865 0.0586 0.0234 0.0527 0.0408 0.0601 0.0675 0.0119 0.0519 0.0846 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAIJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+I+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+I+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+I+G4+F   21     -8913.1913     18163.3827         0.0000    0.6054
+       2  JTT+I+G4+F        21     -8913.9043     18164.8086         1.4259    0.2967
+       3  JTT-DCMUT+I+F     20     -8916.9629     18168.9258         5.5432    0.0379
+       4  JTT-DCMUT+G4+F    20     -8917.2793     18169.5586         6.1760    0.0276
+       5  JTT+I+F           20     -8917.6714     18170.3429         6.9602    0.0186
+       6  JTT+G4+F          20     -8917.9812     18170.9624         7.5797    0.0137
+       7  HIVB+I+G4+F       21     -8922.5180     18182.0361        18.6534    0.0001
+       8  FLU+I+G4+F        21     -8923.1698     18183.3397        19.9570    0.0000
+       9  MTMAM+I+G4+F      21     -8925.3390     18187.6781        24.2954    0.0000
+      10  HIVB+I+F          20     -8926.4653     18187.9305        24.5478    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              JTT-DCMUT+I+G4+F
+lnL:                -8913.1913
+Frequencies:        0.0664 0.0419 0.0560 0.0660 0.0327 0.0327 0.0375 0.0553 0.0260 0.0475 0.0865 0.0586 0.0234 0.0527 0.0408 0.0601 0.0675 0.0119 0.0519 0.0846
+Inv. sites prop:    0.7337
+Gamma shape:        1.0000
+Score:              18163.3827
+Weight:             0.6054
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0565
+Gamma:              0.0413
+Gamma-Inv:          0.9022
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8402
+Alpha:              0.0212
+Alpha-P.Inv:        1.0000
+P.Inv-Alpha:        0.7337
+Frequencies:        0.0664 0.0419 0.0560 0.0660 0.0327 0.0327 0.0375 0.0553 0.0260 0.0475 0.0865 0.0586 0.0234 0.0527 0.0408 0.0601 0.0675 0.0119 0.0519 0.0846 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAIJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+I+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+I+G4+F
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+G4       1     -5079.3778     11499.2589         0.0000    0.5516
+       2  JTT-DCMUT+I        1     -5080.4561     11501.4155         2.1566    0.1876
+       3  JTT+G4             1     -5080.8250     11502.1533         2.8945    0.1297
+       4  JTT-DCMUT          0     -5086.5006     11504.3229         5.0640    0.0439
+       5  JTT+I              1     -5081.9158     11504.3348         5.0759    0.0436
+       6  VT                 0     -5087.5320     11506.3858         7.1270    0.0156
+       7  JTT                0     -5088.1333     11507.5884         8.3296    0.0086
+       8  WAG                0     -5088.4056     11508.1328         8.8740    0.0065
+       9  JTT-DCMUT+I+G4     2     -5079.5853     11508.8553         9.5965    0.0045
+      10  WAG+G4             1     -5084.6962     11509.8958        10.6369    0.0027
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JTT-DCMUT+G4
+lnL:                -5079.3778
+Frequencies:        0.0769 0.0511 0.0425 0.0513 0.0203 0.0411 0.0618 0.0747 0.0230 0.0526 0.0911 0.0595 0.0234 0.0405 0.0505 0.0682 0.0585 0.0143 0.0323 0.0664
+Inv. sites prop:    -
+Gamma shape:        0.4746
+Score:              11499.2589
+Weight:             0.5516
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2332
+Gamma:              0.6863
+Gamma-Inv:          0.0059
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5145
+Alpha:              0.4746
+Alpha-P.Inv:        0.7751
+P.Inv-Alpha:        0.1624
+Frequencies:        0.0621 0.0330 0.0691 0.0487 0.0314 0.0486 0.0377 0.0644 0.0133 0.0598 0.0848 0.0479 0.0110 0.0604 0.0455 0.0778 0.0763 0.0094 0.0425 0.0761 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+G4+F    20     -5021.6204     10373.2408         0.0000    0.3303
+       2  JTT+G4+F          20     -5022.3549     10374.7098         1.4690    0.1585
+       3  JTT-DCMUT+I+G4+F   21     -5021.6360     10375.2720         2.0312    0.1196
+       4  JTT-DCMUT+I+F     20     -5022.7093     10375.4185         2.1777    0.1112
+       5  WAG+G4+F          20     -5022.8432     10375.6863         2.4456    0.0973
+       6  JTT+I+F           20     -5023.4505     10376.9010         3.6602    0.0530
+       7  JTT+I+G4+F        21     -5022.5652     10377.1304         3.8896    0.0472
+       8  WAG+I+F           20     -5023.6831     10377.3662         4.1254    0.0420
+       9  WAG+I+G4+F        21     -5022.8685     10377.7370         4.4962    0.0349
+      10  WAG+F             19     -5026.8260     10381.6521         8.4113    0.0049
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              JTT-DCMUT+G4+F
+lnL:                -5021.6204
+Frequencies:        0.0621 0.0330 0.0691 0.0487 0.0314 0.0486 0.0377 0.0644 0.0133 0.0598 0.0848 0.0479 0.0110 0.0604 0.0455 0.0778 0.0763 0.0094 0.0425 0.0761
+Inv. sites prop:    -
+Gamma shape:        0.4515
+Score:              10373.2408
+Weight:             0.3303
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2063
+Gamma:              0.5863
+Gamma-Inv:          0.2019
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5088
+Alpha:              0.4941
+Alpha-P.Inv:        0.5805
+P.Inv-Alpha:        0.0656
+Frequencies:        0.0621 0.0330 0.0691 0.0487 0.0314 0.0486 0.0377 0.0644 0.0133 0.0598 0.0848 0.0479 0.0110 0.0604 0.0455 0.0778 0.0763 0.0094 0.0425 0.0761 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+G4+F    20     -5021.6204     10378.2408         0.0000    0.3303
+       2  JTT+G4+F          20     -5022.3549     10379.7098         1.4690    0.1585
+       3  JTT-DCMUT+I+G4+F   21     -5021.6360     10380.2720         2.0312    0.1196
+       4  JTT-DCMUT+I+F     20     -5022.7093     10380.4185         2.1777    0.1112
+       5  WAG+G4+F          20     -5022.8432     10380.6863         2.4456    0.0973
+       6  JTT+I+F           20     -5023.4505     10381.9010         3.6602    0.0530
+       7  JTT+I+G4+F        21     -5022.5652     10382.1304         3.8896    0.0472
+       8  WAG+I+F           20     -5023.6831     10382.3662         4.1254    0.0420
+       9  WAG+I+G4+F        21     -5022.8685     10382.7370         4.4962    0.0349
+      10  WAG+F             19     -5026.8260     10386.6521         8.4113    0.0049
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              JTT-DCMUT+G4+F
+lnL:                -5021.6204
+Frequencies:        0.0621 0.0330 0.0691 0.0487 0.0314 0.0486 0.0377 0.0644 0.0133 0.0598 0.0848 0.0479 0.0110 0.0604 0.0455 0.0778 0.0763 0.0094 0.0425 0.0761
+Inv. sites prop:    -
+Gamma shape:        0.4515
+Score:              10378.2408
+Weight:             0.3303
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2063
+Gamma:              0.5863
+Gamma-Inv:          0.2019
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5088
+Alpha:              0.4941
+Alpha-P.Inv:        0.5805
+P.Inv-Alpha:        0.0656
+Frequencies:        0.0621 0.0330 0.0691 0.0487 0.0314 0.0486 0.0377 0.0644 0.0133 0.0598 0.0848 0.0479 0.0110 0.0604 0.0455 0.0778 0.0763 0.0094 0.0425 0.0761 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+G4+F
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT+G4             1     -1047.0009      3434.5051         0.0000    0.3800
+       2  JTT-DCMUT+G4       1     -1047.2047      3434.9127         0.4076    0.3099
+       3  JTT+I              1     -1048.5481      3437.5995         3.0944    0.0809
+       4  JTT-DCMUT+I        1     -1048.7514      3438.0061         3.5010    0.0660
+       5  JTT                0     -1053.3562      3438.0341         3.5290    0.0651
+       6  JTT-DCMUT          0     -1053.6033      3438.5283         4.0232    0.0508
+       7  PMB+G4             1     -1049.8221      3440.1475         5.6424    0.0226
+       8  JTT+I+G4           2     -1046.4873      3442.6595         8.1544    0.0064
+       9  PMB+I              1     -1051.2522      3443.0076         8.5025    0.0054
+      10  JTT-DCMUT+I+G4     2     -1046.6724      3443.0296         8.5245    0.0054
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JTT+G4
+lnL:                -1047.0009
+Frequencies:        0.0767 0.0517 0.0426 0.0515 0.0198 0.0408 0.0618 0.0732 0.0229 0.0538 0.0919 0.0587 0.0238 0.0401 0.0509 0.0688 0.0586 0.0143 0.0321 0.0660
+Inv. sites prop:    -
+Gamma shape:        0.1513
+Score:              3434.5051
+Weight:             0.3800
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1530
+Gamma:              0.7152
+Gamma-Inv:          0.0122
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7233
+Alpha:              0.1487
+Alpha-P.Inv:        0.7296
+P.Inv-Alpha:        0.5896
+Frequencies:        0.0473 0.0218 0.0292 0.0472 0.0256 0.0327 0.0400 0.0507 0.0290 0.0763 0.1090 0.0400 0.0145 0.0509 0.0436 0.0798 0.0876 0.0218 0.0618 0.0911 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HIVB+G4+F         20     -1022.2571      2374.5142         0.0000    0.2216
+       2  JTT+G4+F          20     -1022.5558      2375.1116         0.5974    0.1644
+       3  HIVB+I+G4+F       21     -1021.6985      2375.3971         0.8828    0.1425
+       4  JTT-DCMUT+G4+F    20     -1022.8260      2375.6520         1.1378    0.1255
+       5  JTT+I+G4+F        21     -1022.0799      2376.1599         1.6457    0.0973
+       6  JTT-DCMUT+I+G4+F   21     -1022.3333      2376.6666         2.1524    0.0755
+       7  HIVB+I+F          20     -1023.6040      2377.2079         2.6937    0.0576
+       8  JTT+I+F           20     -1024.0957      2378.1915         3.6772    0.0352
+       9  JTT-DCMUT+I+F     20     -1024.3658      2378.7316         4.2174    0.0269
+      10  DAYHOFF+G4+F      20     -1025.3077      2380.6153         6.1011    0.0105
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HIVB+G4+F
+lnL:                -1022.2571
+Frequencies:        0.0473 0.0218 0.0292 0.0472 0.0256 0.0327 0.0400 0.0507 0.0290 0.0763 0.1090 0.0400 0.0145 0.0509 0.0436 0.0798 0.0876 0.0218 0.0618 0.0911
+Inv. sites prop:    -
+Gamma shape:        0.0784
+Score:              2374.5142
+Weight:             0.2216
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1267
+Gamma:              0.5374
+Gamma-Inv:          0.3342
+Frequencies:        0.9975
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7456
+Alpha:              0.1141
+Alpha-P.Inv:        0.7188
+P.Inv-Alpha:        0.5978
+Frequencies:        0.0473 0.0218 0.0292 0.0472 0.0256 0.0327 0.0400 0.0507 0.0290 0.0763 0.1090 0.0400 0.0145 0.0509 0.0436 0.0798 0.0876 0.0218 0.0618 0.0911 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m HIVB -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAHIVBF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model HIVB+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m HIVB+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HIVB+G4+F         20     -1022.2571      2379.5142         0.0000    0.2212
+       2  JTT+G4+F          20     -1022.5558      2380.1116         0.5974    0.1641
+       3  HIVB+I+G4+F       21     -1021.6985      2380.3971         0.8828    0.1423
+       4  JTT-DCMUT+G4+F    20     -1022.8260      2380.6520         1.1378    0.1253
+       5  JTT+I+G4+F        21     -1022.0799      2381.1599         1.6457    0.0972
+       6  JTT-DCMUT+I+G4+F   21     -1022.3333      2381.6666         2.1524    0.0754
+       7  HIVB+I+F          20     -1023.6040      2382.2079         2.6937    0.0575
+       8  JTT+I+F           20     -1024.0957      2383.1915         3.6772    0.0352
+       9  JTT-DCMUT+I+F     20     -1024.3658      2383.7316         4.2174    0.0269
+      10  DAYHOFF+G4+F      20     -1025.3077      2385.6153         6.1011    0.0105
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HIVB+G4+F
+lnL:                -1022.2571
+Frequencies:        0.0473 0.0218 0.0292 0.0472 0.0256 0.0327 0.0400 0.0507 0.0290 0.0763 0.1090 0.0400 0.0145 0.0509 0.0436 0.0798 0.0876 0.0218 0.0618 0.0911
+Inv. sites prop:    -
+Gamma shape:        0.0784
+Score:              2379.5142
+Weight:             0.2212
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1266
+Gamma:              0.5374
+Gamma-Inv:          0.3342
+Frequencies:        0.9960
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7455
+Alpha:              0.1141
+Alpha-P.Inv:        0.7189
+P.Inv-Alpha:        0.5978
+Frequencies:        0.0473 0.0218 0.0292 0.0472 0.0256 0.0327 0.0400 0.0507 0.0290 0.0763 0.1090 0.0400 0.0145 0.0509 0.0436 0.0798 0.0876 0.0218 0.0618 0.0911 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m HIVB -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAHIVBF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model HIVB+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m HIVB+G4+F
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -218.0684      1767.4586         0.0000    0.8651
+       2  PMB                0      -221.1407      1773.6031         6.1444    0.0401
+       3  BLOSUM62           0      -221.6138      1774.5492         7.0906    0.0250
+       4  VT                 0      -222.3182      1775.9581         8.4995    0.0123
+       5  MTZOA              0      -222.4839      1776.2896         8.8310    0.0105
+       6  STMTREV+G4         1      -218.0091      1776.5214         9.0628    0.0093
+       7  STMTREV+I          1      -218.0895      1776.6823         9.2237    0.0086
+       8  JTT                0      -223.0317      1777.3851         9.9265    0.0060
+       9  JTT-DCMUT          0      -223.1267      1777.5752        10.1166    0.0055
+      10  LG                 0      -223.2725      1777.8667        10.4081    0.0048
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              STMTREV
+lnL:                -218.0684
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              1767.4586
+Weight:             0.8651
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0097
+Gamma:              0.0105
+Gamma-Inv:          0.0001
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0213
+Alpha:              0.0222
+Alpha-P.Inv:        0.0221
+P.Inv-Alpha:        0.0593
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -218.0684       726.1369         0.0000    0.4690
+       2  STMTREV+G4         1      -218.0091       728.0181         1.8813    0.1831
+       3  STMTREV+I          1      -218.0895       728.1790         2.0422    0.1689
+       4  STMTREV+I+G4       2      -218.0288       730.0575         3.9207    0.0660
+       5  PMB                0      -221.1407       732.2813         6.1444    0.0217
+       6  BLOSUM62           0      -221.6138       733.2275         7.0906    0.0135
+       7  PMB+G4             1      -221.1185       734.2371         8.1002    0.0082
+       8  PMB+I              1      -221.1620       734.3240         8.1871    0.0078
+       9  VT                 0      -222.3182       734.6364         8.4995    0.0067
+      10  MTZOA              0      -222.4839       734.9679         8.8310    0.0057
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              STMTREV
+lnL:                -218.0684
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              726.1369
+Weight:             0.4690
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1906
+Gamma:              0.2065
+Gamma-Inv:          0.0718
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0213
+Alpha:              0.0222
+Alpha-P.Inv:        0.0221
+P.Inv-Alpha:        0.0593
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -218.0684       730.1369         0.0000    0.4690
+       2  STMTREV+G4         1      -218.0091       732.0181         1.8813    0.1831
+       3  STMTREV+I          1      -218.0895       732.1790         2.0422    0.1689
+       4  STMTREV+I+G4       2      -218.0288       734.0575         3.9207    0.0660
+       5  PMB                0      -221.1407       736.2813         6.1444    0.0217
+       6  BLOSUM62           0      -221.6138       737.2275         7.0906    0.0135
+       7  PMB+G4             1      -221.1185       738.2371         8.1002    0.0082
+       8  PMB+I              1      -221.1620       738.3240         8.1871    0.0078
+       9  VT                 0      -222.3182       738.6364         8.4995    0.0067
+      10  MTZOA              0      -222.4839       738.9679         8.8310    0.0057
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              STMTREV
+lnL:                -218.0684
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              730.1369
+Weight:             0.4690
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1906
+Gamma:              0.2065
+Gamma-Inv:          0.0718
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0213
+Alpha:              0.0222
+Alpha-P.Inv:        0.0221
+P.Inv-Alpha:        0.0593
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  CPREV              0      -667.5859      2666.4936         0.0000    0.8244
+       2  PMB                0      -670.3622      2672.0461         5.5526    0.0513
+       3  STMTREV            0      -670.6420      2672.6058         6.1123    0.0388
+       4  CPREV+G4           1      -666.1442      2672.7918         6.2982    0.0354
+       5  BLOSUM62           0      -670.9648      2673.2513         6.7577    0.0281
+       6  CPREV+I            1      -667.3895      2675.2823         8.7888    0.0102
+       7  PMB+G4             1      -668.9432      2678.3896        11.8960    0.0022
+       8  VT                 0      -673.6831      2678.6880        12.1944    0.0019
+       9  STMTREV+G4         1      -669.2205      2678.9444        12.4508    0.0016
+      10  BLOSUM62+G4        1      -669.5511      2679.6055        13.1119    0.0012
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              CPREV
+lnL:                -667.5859
+Frequencies:        0.0755 0.0621 0.0410 0.0371 0.0091 0.0382 0.0495 0.0838 0.0246 0.0806 0.1011 0.0504 0.0220 0.0506 0.0431 0.0622 0.0543 0.0181 0.0307 0.0660
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2666.4936
+Weight:             0.8244
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0116
+Gamma:              0.0405
+Gamma-Inv:          0.0007
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.9119
+Alpha:              0.0215
+Alpha-P.Inv:        0.0217
+P.Inv-Alpha:        0.9096
+Frequencies:        0.0855 0.0631 0.0496 0.0270 0.0180 0.0180 0.0315 0.0631 0.0225 0.0901 0.1577 0.0315 0.0180 0.0496 0.0225 0.0675 0.0586 0.0315 0.0405 0.0541 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m CPREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMACPREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model CPREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m CPREV
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  CPREV+G4           1      -666.1442      1624.2885         0.0000    0.3400
+       2  CPREV              0      -667.5859      1625.1718         0.8833    0.2186
+       3  CPREV+I+G4         2      -665.5972      1625.1945         0.9060    0.2162
+       4  CPREV+I            1      -667.3895      1626.7790         2.4906    0.0979
+       5  PMB+G4             1      -668.9432      1629.8863         5.5978    0.0207
+       6  STMTREV+G4         1      -669.2205      1630.4411         6.1526    0.0157
+       7  PMB                0      -670.3622      1630.7244         6.4359    0.0136
+       8  BLOSUM62+G4        1      -669.5511      1631.1022         6.8137    0.0113
+       9  PMB+I+G4           2      -668.5956      1631.1912         6.9028    0.0108
+      10  STMTREV            0      -670.6420      1631.2841         6.9956    0.0103
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              CPREV+G4
+lnL:                -666.1442
+Frequencies:        0.0755 0.0621 0.0410 0.0371 0.0091 0.0382 0.0495 0.0838 0.0246 0.0806 0.1011 0.0504 0.0220 0.0506 0.0431 0.0622 0.0543 0.0181 0.0307 0.0660
+Inv. sites prop:    -
+Gamma shape:        0.0215
+Score:              1624.2885
+Weight:             0.3400
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1120
+Gamma:              0.3917
+Gamma-Inv:          0.2438
+Frequencies:        0.0059
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.9120
+Alpha:              0.0215
+Alpha-P.Inv:        0.0217
+P.Inv-Alpha:        0.9095
+Frequencies:        0.0855 0.0631 0.0496 0.0270 0.0180 0.0180 0.0315 0.0631 0.0225 0.0901 0.1577 0.0315 0.0180 0.0496 0.0225 0.0675 0.0586 0.0315 0.0405 0.0541 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m CPREV -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMACPREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model CPREV+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m CPREV+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  CPREV+G4           1      -666.1442      1628.2885         0.0000    0.3408
+       2  CPREV              0      -667.5859      1629.1718         0.8833    0.2191
+       3  CPREV+I+G4         2      -665.5972      1629.1945         0.9060    0.2167
+       4  CPREV+I            1      -667.3895      1630.7790         2.4906    0.0981
+       5  PMB+G4             1      -668.9432      1633.8863         5.5978    0.0207
+       6  STMTREV+G4         1      -669.2205      1634.4411         6.1526    0.0157
+       7  PMB                0      -670.3622      1634.7244         6.4359    0.0136
+       8  BLOSUM62+G4        1      -669.5511      1635.1022         6.8137    0.0113
+       9  PMB+I+G4           2      -668.5956      1635.1912         6.9028    0.0108
+      10  STMTREV            0      -670.6420      1635.2841         6.9956    0.0103
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              CPREV+G4
+lnL:                -666.1442
+Frequencies:        0.0755 0.0621 0.0410 0.0371 0.0091 0.0382 0.0495 0.0838 0.0246 0.0806 0.1011 0.0504 0.0220 0.0506 0.0431 0.0622 0.0543 0.0181 0.0307 0.0660
+Inv. sites prop:    -
+Gamma shape:        0.0215
+Score:              1628.2885
+Weight:             0.3408
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1120
+Gamma:              0.3918
+Gamma-Inv:          0.2437
+Frequencies:        0.0036
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.9120
+Alpha:              0.0215
+Alpha-P.Inv:        0.0217
+P.Inv-Alpha:        0.9096
+Frequencies:        0.0855 0.0631 0.0496 0.0270 0.0180 0.0180 0.0315 0.0631 0.0225 0.0901 0.1577 0.0315 0.0180 0.0496 0.0225 0.0675 0.0586 0.0315 0.0405 0.0541 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m CPREV -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMACPREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model CPREV+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m CPREV+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -198.6454      1728.6125         0.0000    0.8787
+       2  HIVW               0      -201.1246      1733.5710         4.9585    0.0736
+       3  HIVB               0      -202.5078      1736.3374         7.7249    0.0185
+       4  STMTREV+G4         1      -198.6467      1737.7966         9.1841    0.0089
+       5  STMTREV+I          1      -198.6700      1737.8433         9.2308    0.0087
+       6  JTT                0      -204.5922      1740.5062        11.8938    0.0023
+       7  CPREV              0      -204.7425      1740.8068        12.1943    0.0020
+       8  JTT-DCMUT          0      -204.8753      1741.0724        12.4599    0.0017
+       9  VT                 0      -205.0981      1741.5180        12.9056    0.0014
+      10  HIVW+G4            1      -201.1248      1742.7530        14.1405    0.0007
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              STMTREV
+lnL:                -198.6454
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              1728.6125
+Weight:             0.8787
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0097
+Gamma:              0.0099
+Gamma-Inv:          0.0001
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0211
+Alpha:              92.8878
+Alpha-P.Inv:        92.8707
+P.Inv-Alpha:        0.0212
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -198.6454       687.2907         0.0000    0.4823
+       2  STMTREV+G4         1      -198.6467       689.2933         2.0026    0.1772
+       3  STMTREV+I          1      -198.6700       689.3400         2.0493    0.1731
+       4  STMTREV+I+G4       2      -198.6713       691.3427         4.0519    0.0636
+       5  HIVW               0      -201.1246       692.2492         4.9585    0.0404
+       6  HIVW+G4            1      -201.1248       694.2497         6.9589    0.0149
+       7  HIVW+I             1      -201.1465       694.2931         7.0024    0.0145
+       8  HIVB               0      -202.5078       695.0156         7.7249    0.0101
+       9  HIVW+I+G4          2      -201.1468       696.2935         9.0028    0.0054
+      10  HIVB+G4            1      -202.5079       697.0158         9.7251    0.0037
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              STMTREV
+lnL:                -198.6454
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              687.2907
+Weight:             0.4823
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1931
+Gamma:              0.1978
+Gamma-Inv:          0.0710
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0211
+Alpha:              92.8878
+Alpha-P.Inv:        92.8707
+P.Inv-Alpha:        0.0212
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -198.6454       691.2907         0.0000    0.4823
+       2  STMTREV+G4         1      -198.6467       693.2933         2.0026    0.1772
+       3  STMTREV+I          1      -198.6700       693.3400         2.0493    0.1731
+       4  STMTREV+I+G4       2      -198.6713       695.3427         4.0519    0.0636
+       5  HIVW               0      -201.1246       696.2492         4.9585    0.0404
+       6  HIVW+G4            1      -201.1248       698.2497         6.9589    0.0149
+       7  HIVW+I             1      -201.1465       698.2931         7.0024    0.0145
+       8  HIVB               0      -202.5078       699.0156         7.7249    0.0101
+       9  HIVW+I+G4          2      -201.1468       700.2935         9.0028    0.0054
+      10  HIVB+G4            1      -202.5079       701.0158         9.7251    0.0037
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              STMTREV
+lnL:                -198.6454
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              691.2907
+Weight:             0.4823
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1931
+Gamma:              0.1978
+Gamma-Inv:          0.0710
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0211
+Alpha:              92.8878
+Alpha-P.Inv:        92.8707
+P.Inv-Alpha:        0.0212
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT          0      -438.2622      2207.8462         0.0000    0.3586
+       2  JTT                0      -438.4005      2208.1227         0.2765    0.3123
+       3  HIVB               0      -438.8652      2209.0522         1.2059    0.1962
+       4  LG                 0      -440.1987      2211.7192         3.8729    0.0517
+       5  FLU                0      -441.1846      2213.6909         5.8447    0.0193
+       6  CPREV              0      -441.4060      2214.1338         6.2876    0.0155
+       7  STMTREV            0      -441.9533      2215.2283         7.3820    0.0089
+       8  PMB                0      -442.1451      2215.6120         7.7658    0.0074
+       9  JTT-DCMUT+G4       1      -438.2691      2217.0415         9.1952    0.0036
+      10  BLOSUM62           0      -442.8911      2217.1040         9.2578    0.0035
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JTT-DCMUT
+lnL:                -438.2622
+Frequencies:        0.0769 0.0511 0.0425 0.0513 0.0203 0.0411 0.0618 0.0747 0.0230 0.0526 0.0911 0.0595 0.0234 0.0405 0.0505 0.0682 0.0585 0.0143 0.0323 0.0664
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2207.8462
+Weight:             0.3586
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0096
+Gamma:              0.0099
+Gamma-Inv:          0.0001
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0221
+Alpha:              92.3376
+Alpha-P.Inv:        92.3091
+P.Inv-Alpha:        0.0221
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT          0      -438.2622      1166.5245         0.0000    0.1979
+       2  JTT                0      -438.4005      1166.8010         0.2765    0.1723
+       3  HIVB               0      -438.8652      1167.7304         1.2059    0.1083
+       4  JTT-DCMUT+G4       1      -438.2691      1168.5382         2.0137    0.0723
+       5  JTT-DCMUT+I        1      -438.3034      1168.6069         2.0824    0.0699
+       6  JTT+G4             1      -438.4074      1168.8147         2.2902    0.0630
+       7  JTT+I              1      -438.4417      1168.8835         2.3590    0.0608
+       8  HIVB+G4            1      -438.8713      1169.7425         3.2180    0.0396
+       9  HIVB+I             1      -438.9040      1169.8080         3.2836    0.0383
+      10  LG                 0      -440.1987      1170.3974         3.8729    0.0285
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              JTT-DCMUT
+lnL:                -438.2622
+Frequencies:        0.0769 0.0511 0.0425 0.0513 0.0203 0.0411 0.0618 0.0747 0.0230 0.0526 0.0911 0.0595 0.0234 0.0405 0.0505 0.0682 0.0585 0.0143 0.0323 0.0664
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              1166.5245
+Weight:             0.1979
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1912
+Gamma:              0.1978
+Gamma-Inv:          0.0699
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0221
+Alpha:              92.3376
+Alpha-P.Inv:        92.3091
+P.Inv-Alpha:        0.0221
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT          0      -438.2622      1170.5245         0.0000    0.1979
+       2  JTT                0      -438.4005      1170.8010         0.2765    0.1723
+       3  HIVB               0      -438.8652      1171.7304         1.2059    0.1083
+       4  JTT-DCMUT+G4       1      -438.2691      1172.5382         2.0137    0.0723
+       5  JTT-DCMUT+I        1      -438.3034      1172.6069         2.0824    0.0699
+       6  JTT+G4             1      -438.4074      1172.8147         2.2902    0.0630
+       7  JTT+I              1      -438.4417      1172.8835         2.3590    0.0608
+       8  HIVB+G4            1      -438.8713      1173.7425         3.2180    0.0396
+       9  HIVB+I             1      -438.9040      1173.8080         3.2836    0.0383
+      10  LG                 0      -440.1987      1174.3974         3.8729    0.0285
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              JTT-DCMUT
+lnL:                -438.2622
+Frequencies:        0.0769 0.0511 0.0425 0.0513 0.0203 0.0411 0.0618 0.0747 0.0230 0.0526 0.0911 0.0595 0.0234 0.0405 0.0505 0.0682 0.0585 0.0143 0.0323 0.0664
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              1170.5245
+Weight:             0.1979
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1912
+Gamma:              0.1978
+Gamma-Inv:          0.0699
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0221
+Alpha:              92.3376
+Alpha-P.Inv:        92.3091
+P.Inv-Alpha:        0.0221
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV+I+G4       2      -506.1160      2361.9168         0.0000    1.0000
+       2  JTT+I+G4           2      -524.0519      2397.7885        35.8717    0.0000
+       3  JTT-DCMUT+I+G4     2      -524.1324      2397.9497        36.0329    0.0000
+       4  FLU+I+G4           2      -524.2753      2398.2354        36.3186    0.0000
+       5  MTZOA+I+G4         2      -525.7163      2401.1173        39.2005    0.0000
+       6  PMB+I+G4           2      -527.7538      2405.1924        43.2756    0.0000
+       7  CPREV+I+G4         2      -529.0076      2407.7000        45.7832    0.0000
+       8  DCMUT+I+G4         2      -529.2531      2408.1911        46.2743    0.0000
+       9  VT+I+G4            2      -531.0239      2411.7327        49.8159    0.0000
+      10  BLOSUM62+I+G4      2      -531.1718      2412.0285        50.1117    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              STMTREV+I+G4
+lnL:                -506.1160
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    0.7956
+Gamma shape:        0.0821
+Score:              2361.9168
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8375
+Alpha:              0.0530
+Alpha-P.Inv:        0.0821
+P.Inv-Alpha:        0.7956
+Frequencies:        0.0412 0.0332 0.0165 0.0579 0.0579 0.0496 0.0496 0.0413 0.0331 0.0826 0.0797 0.0412 0.0083 0.0659 0.0579 0.0778 0.0411 0.0083 0.0580 0.0991 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAISTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV+I+G4       2      -506.1160      1306.2320         0.0000    1.0000
+       2  STMTREV+I+G4+F    21      -499.3950      1330.7900        24.5581    0.0000
+       3  HIVW+I+G4+F       21      -500.3760      1332.7520        26.5200    0.0000
+       4  JTT+I+G4           2      -524.0519      1342.1037        35.8717    0.0000
+       5  JTT-DCMUT+I+G4     2      -524.1324      1342.2649        36.0329    0.0000
+       6  FLU+I+G4           2      -524.2753      1342.5506        36.3186    0.0000
+       7  MTZOA+I+G4         2      -525.7163      1345.4325        39.2005    0.0000
+       8  PMB+I+G4           2      -527.7538      1349.5076        43.2756    0.0000
+       9  JTT+I+G4+F        21      -509.6128      1351.2257        44.9937    0.0000
+      10  CPREV+I+G4         2      -529.0076      1352.0151        45.7832    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              STMTREV+I+G4
+lnL:                -506.1160
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    0.7956
+Gamma shape:        0.0821
+Score:              1306.2320
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8375
+Alpha:              0.0580
+Alpha-P.Inv:        0.0821
+P.Inv-Alpha:        0.7956
+Frequencies:        0.0412 0.0332 0.0165 0.0579 0.0579 0.0496 0.0496 0.0413 0.0331 0.0826 0.0797 0.0412 0.0083 0.0659 0.0579 0.0778 0.0411 0.0083 0.0580 0.0991 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAISTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV+I+G4       2      -506.1160      1310.2320         0.0000    1.0000
+       2  STMTREV+I+G4+F    21      -499.3950      1335.7900        25.5581    0.0000
+       3  HIVW+I+G4+F       21      -500.3760      1337.7520        27.5200    0.0000
+       4  JTT+I+G4           2      -524.0519      1346.1037        35.8717    0.0000
+       5  JTT-DCMUT+I+G4     2      -524.1324      1346.2649        36.0329    0.0000
+       6  FLU+I+G4           2      -524.2753      1346.5506        36.3186    0.0000
+       7  MTZOA+I+G4         2      -525.7163      1349.4325        39.2005    0.0000
+       8  PMB+I+G4           2      -527.7538      1353.5076        43.2756    0.0000
+       9  CPREV+I+G4         2      -529.0076      1356.0151        45.7832    0.0000
+      10  JTT+I+G4+F        21      -509.6128      1356.2257        45.9937    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              STMTREV+I+G4
+lnL:                -506.1160
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    0.7956
+Gamma shape:        0.0821
+Score:              1310.2320
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8375
+Alpha:              0.0580
+Alpha-P.Inv:        0.0821
+P.Inv-Alpha:        0.7956
+Frequencies:        0.0412 0.0332 0.0165 0.0579 0.0579 0.0496 0.0496 0.0413 0.0331 0.0826 0.0797 0.0412 0.0083 0.0659 0.0579 0.0778 0.0411 0.0083 0.0580 0.0991 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAISTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT                0     -1431.2653      4193.8524         0.0000    0.5087
+       2  JTT-DCMUT          0     -1431.3939      4194.1096         0.2572    0.4473
+       3  JTT+G4             1     -1430.2563      4201.0160         7.1636    0.0142
+       4  JTT-DCMUT+G4       1     -1430.3843      4201.2719         7.4195    0.0125
+       5  JTT+I              1     -1431.1736      4202.8504         8.9980    0.0057
+       6  JTT-DCMUT+I        1     -1431.3024      4203.1080         9.2556    0.0050
+       7  VT                 0     -1436.6945      4204.7107        10.8583    0.0022
+       8  DAYHOFF            0     -1437.0938      4205.5093        11.6569    0.0015
+       9  DCMUT              0     -1437.1111      4205.5440        11.6916    0.0015
+      10  WAG                0     -1437.4806      4206.2829        12.4306    0.0010
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JTT
+lnL:                -1431.2653
+Frequencies:        0.0767 0.0517 0.0426 0.0515 0.0198 0.0408 0.0618 0.0732 0.0229 0.0538 0.0919 0.0587 0.0238 0.0401 0.0509 0.0688 0.0586 0.0143 0.0321 0.0660
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              4193.8524
+Weight:             0.5087
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0107
+Gamma:              0.0268
+Gamma-Inv:          0.0003
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3460
+Alpha:              0.3946
+Alpha-P.Inv:        0.3947
+P.Inv-Alpha:        0.0221
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT+G4             1     -1430.2563      3152.5127         0.0000    0.1921
+       2  JTT                0     -1431.2653      3152.5306         0.0179    0.1904
+       3  JTT-DCMUT+G4       1     -1430.3843      3152.7686         0.2559    0.1690
+       4  JTT-DCMUT          0     -1431.3939      3152.7879         0.2752    0.1674
+       5  JTT+I              1     -1431.1736      3154.3471         1.8345    0.0768
+       6  JTT+I+G4           2     -1430.2736      3154.5471         2.0344    0.0695
+       7  JTT-DCMUT+I        1     -1431.3024      3154.6047         2.0920    0.0675
+       8  JTT-DCMUT+I+G4     2     -1430.4015      3154.8030         2.2903    0.0611
+       9  VT                 0     -1436.6945      3163.3889        10.8762    0.0008
+      10  VT+G4              1     -1435.7676      3163.5353        11.0226    0.0008
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              JTT+G4
+lnL:                -1430.2563
+Frequencies:        0.0767 0.0517 0.0426 0.0515 0.0198 0.0408 0.0618 0.0732 0.0229 0.0538 0.0919 0.0587 0.0238 0.0401 0.0509 0.0688 0.0586 0.0143 0.0321 0.0660
+Inv. sites prop:    -
+Gamma shape:        0.3943
+Score:              3152.5127
+Weight:             0.1921
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1452
+Gamma:              0.3633
+Gamma-Inv:          0.1314
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3460
+Alpha:              0.3946
+Alpha-P.Inv:        0.3947
+P.Inv-Alpha:        0.0221
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT+G4             1     -1430.2563      3156.5127         0.0000    0.1921
+       2  JTT                0     -1431.2653      3156.5306         0.0179    0.1904
+       3  JTT-DCMUT+G4       1     -1430.3843      3156.7686         0.2559    0.1690
+       4  JTT-DCMUT          0     -1431.3939      3156.7879         0.2752    0.1674
+       5  JTT+I              1     -1431.1736      3158.3471         1.8345    0.0768
+       6  JTT+I+G4           2     -1430.2736      3158.5471         2.0344    0.0695
+       7  JTT-DCMUT+I        1     -1431.3024      3158.6047         2.0920    0.0675
+       8  JTT-DCMUT+I+G4     2     -1430.4015      3158.8030         2.2903    0.0611
+       9  VT                 0     -1436.6945      3167.3889        10.8762    0.0008
+      10  VT+G4              1     -1435.7676      3167.5353        11.0226    0.0008
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              JTT+G4
+lnL:                -1430.2563
+Frequencies:        0.0767 0.0517 0.0426 0.0515 0.0198 0.0408 0.0618 0.0732 0.0229 0.0538 0.0919 0.0587 0.0238 0.0401 0.0509 0.0688 0.0586 0.0143 0.0321 0.0660
+Inv. sites prop:    -
+Gamma shape:        0.3943
+Score:              3156.5127
+Weight:             0.1921
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1452
+Gamma:              0.3633
+Gamma-Inv:          0.1314
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3460
+Alpha:              0.3946
+Alpha-P.Inv:        0.3947
+P.Inv-Alpha:        0.0221
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT+G4
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -122.4071      1576.1359         0.0000    0.3832
+       2  MTART              0      -122.6350      1576.5918         0.4560    0.3051
+       3  MTZOA              0      -123.4784      1578.2785         2.1427    0.1313
+       4  MTMAM              0      -124.7763      1580.8744         4.7385    0.0358
+       5  MTREV              0      -125.0908      1581.5033         5.3674    0.0262
+       6  BLOSUM62           0      -125.3469      1582.0155         5.8796    0.0203
+       7  CPREV              0      -125.4163      1582.1544         6.0185    0.0189
+       8  PMB                0      -125.8506      1583.0229         6.8871    0.0122
+       9  FLU                0      -126.1271      1583.5760         7.4402    0.0093
+      10  VT                 0      -126.1276      1583.5769         7.4411    0.0093
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              STMTREV
+lnL:                -122.4071
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              1576.1359
+Weight:             0.3832
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0097
+Gamma:              0.0100
+Gamma-Inv:          0.0001
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0212
+Alpha:              45.0868
+Alpha-P.Inv:        44.2961
+P.Inv-Alpha:        0.0212
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -122.4071       534.8141         0.0000    0.2099
+       2  MTART              0      -122.6350       535.2701         0.4560    0.1671
+       3  STMTREV+G4         1      -122.4072       536.8144         2.0003    0.0772
+       4  STMTREV+I          1      -122.4288       536.8576         2.0435    0.0756
+       5  MTZOA              0      -123.4784       536.9568         2.1427    0.0719
+       6  MTART+G4           1      -122.6351       537.2701         2.4560    0.0615
+       7  MTART+I            1      -122.6564       537.3128         2.4987    0.0602
+       8  STMTREV+I+G4       2      -122.4290       538.8579         4.0438    0.0278
+       9  MTZOA+G4           1      -123.4684       538.9369         4.1228    0.0267
+      10  MTZOA+I            1      -123.4996       538.9993         4.1851    0.0259
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              STMTREV
+lnL:                -122.4071
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              534.8141
+Weight:             0.2099
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1933
+Gamma:              0.1983
+Gamma-Inv:          0.0714
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0212
+Alpha:              45.0868
+Alpha-P.Inv:        44.2961
+P.Inv-Alpha:        0.0212
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  STMTREV            0      -122.4071       538.8141         0.0000    0.2099
+       2  MTART              0      -122.6350       539.2701         0.4560    0.1671
+       3  STMTREV+G4         1      -122.4072       540.8144         2.0003    0.0772
+       4  STMTREV+I          1      -122.4288       540.8576         2.0435    0.0756
+       5  MTZOA              0      -123.4784       540.9568         2.1427    0.0719
+       6  MTART+G4           1      -122.6351       541.2701         2.4560    0.0615
+       7  MTART+I            1      -122.6564       541.3128         2.4987    0.0602
+       8  STMTREV+I+G4       2      -122.4290       542.8579         4.0438    0.0278
+       9  MTZOA+G4           1      -123.4684       542.9369         4.1228    0.0267
+      10  MTZOA+I            1      -123.4996       542.9993         4.1851    0.0259
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              STMTREV
+lnL:                -122.4071
+Frequencies:        0.0462 0.0534 0.0362 0.0233 0.0234 0.0390 0.0341 0.0389 0.0165 0.0892 0.1617 0.0551 0.0233 0.0911 0.0345 0.0771 0.0419 0.0201 0.0305 0.0644
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              538.8141
+Weight:             0.2099
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1933
+Gamma:              0.1983
+Gamma-Inv:          0.0714
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0212
+Alpha:              45.0868
+Alpha-P.Inv:        44.2961
+P.Inv-Alpha:        0.0212
+Frequencies:        -
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m STMTREV -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMASTMTREV -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model STMTREV
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m STMTREV
+Done

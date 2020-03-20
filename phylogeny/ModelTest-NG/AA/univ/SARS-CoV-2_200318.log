@@ -1,0 +1,228 @@
+Physical cores: 4
+Logical cores:  8
+Memory:         15.6GB
+Extensions:     AVX
+
+WARNING: Partition DATA: There are undetermined columns in the alignment (only gaps)
+WARNING: Partition DATA: Sequences LC522974.1 and LC522975.1 are identical
+WARNING: Partition DATA: Sequences LC522974.1 and LR757995.1 are identical
+WARNING: Partition DATA: Sequences LC522974.1 and MN938384.1 are identical
+WARNING: Partition DATA: Sequences LC522974.1 and MN985325.1 are identical
+WARNING: Partition DATA: Sequences LC522974.1 and MT020880.1 are identical
+WARNING: Partition DATA: Sequences LC522974.1 and MT020881.1 are identical
+WARNING: Partition DATA: Sequences LC522974.1 and MT066175.1 are identical
+WARNING: Partition DATA: Sequences LC528232.1 and LC528233.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MN908947.3 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MN988668.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MN988669.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MN996528.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MN996530.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MT019530.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MT019532.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MT039873.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MT072688.1 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MT093631.2 are identical
+WARNING: Partition DATA: Sequences LR757996.1 and MT106053.1 are identical
+WARNING: Partition DATA: Sequences MT027062.1 and MT027063.1 are identical
+WARNING: Partition DATA: Sequences MT135041.1 and MT135042.1 are identical
+WARNING: Partition DATA: Sequences MT135041.1 and MT135044.1 are identical
+WARNING: Partition DATA: Sequences MT163717.1 and MT163718.1 are identical
+WARNING: Partition DATA: There are undetermined columns in the alignment (only gaps)
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.6
+
+Input data:
+  MSA:        phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            74
+  #sites:           9716
+  #patterns:        389
+  Max. thread mem:  69 MB
+
+Output:
+  Log:           phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318.log
+  Starting tree: phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318.tree
+  Results:       phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          4/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -p 4 -d aa -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -o phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:39
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+G4+F    20    -33426.3950     68367.7423         0.0000    0.7403
+       2  JTT+G4+F          20    -33427.4747     68369.9017         2.1594    0.2515
+       3  JTT-DCMUT+I+G4+F   21    -33426.5999     68377.3337         9.5914    0.0061
+       4  JTT+I+G4+F        21    -33427.6787     68379.4913        11.7491    0.0021
+       5  JTT-DCMUT+I+F     20    -33436.3887     68387.7296        19.9874    0.0000
+       6  JTT+I+F           20    -33437.4709     68389.8941        22.1518    0.0000
+       7  JTT-DCMUT+F       19    -33448.7679     68403.3065        35.5643    0.0000
+       8  JTT+F             19    -33449.8208     68405.4124        37.6702    0.0000
+       9  FLU+G4+F          20    -33457.7607     68430.4737        62.7314    0.0000
+      10  FLU+I+G4+F        21    -33457.8190     68439.7718        72.0295    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JTT-DCMUT+G4+F
+lnL:                -33426.3950
+Frequencies:        0.0676 0.0361 0.0547 0.0525 0.0303 0.0375 0.0453 0.0594 0.0193 0.0524 0.0947 0.0579 0.0211 0.0509 0.0406 0.0680 0.0739 0.0113 0.0461 0.0804
+Inv. sites prop:    -
+Gamma shape:        0.2790
+Score:              68367.7423
+Weight:             0.7403
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9918
+Gamma-Inv:          0.0082
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5693
+Alpha:              0.2759
+Alpha-P.Inv:        0.2814
+P.Inv-Alpha:        0.0216
+Frequencies:        0.0676 0.0361 0.0547 0.0525 0.0303 0.0375 0.0453 0.0594 0.0193 0.0524 0.0947 0.0579 0.0211 0.0509 0.0406 0.0680 0.0739 0.0113 0.0461 0.0804 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+G4+F
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+G4+F    20    -33426.3950     67182.7900         0.0000    0.5743
+       2  JTT+G4+F          20    -33427.4747     67184.9493         2.1594    0.1951
+       3  JTT-DCMUT+I+G4+F   21    -33426.5999     67185.1999         2.4099    0.1721
+       4  JTT+I+G4+F        21    -33427.6787     67187.3575         4.5675    0.0585
+       5  JTT-DCMUT+I+F     20    -33436.3887     67202.7773        19.9874    0.0000
+       6  JTT+I+F           20    -33437.4709     67204.9417        22.1518    0.0000
+       7  JTT-DCMUT+F       19    -33448.7679     67225.5357        42.7458    0.0000
+       8  JTT+F             19    -33449.8208     67227.6416        44.8517    0.0000
+       9  FLU+G4+F          20    -33457.7607     67245.5213        62.7314    0.0000
+      10  FLU+I+G4+F        21    -33457.8190     67247.6380        64.8480    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              JTT-DCMUT+G4+F
+lnL:                -33426.3950
+Frequencies:        0.0676 0.0361 0.0547 0.0525 0.0303 0.0375 0.0453 0.0594 0.0193 0.0524 0.0947 0.0579 0.0211 0.0509 0.0406 0.0680 0.0739 0.0113 0.0461 0.0804
+Inv. sites prop:    -
+Gamma shape:        0.2790
+Score:              67182.7900
+Weight:             0.5743
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.7693
+Gamma-Inv:          0.2306
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5693
+Alpha:              0.2759
+Alpha-P.Inv:        0.2814
+P.Inv-Alpha:        0.0216
+Frequencies:        0.0676 0.0361 0.0547 0.0525 0.0303 0.0375 0.0453 0.0594 0.0193 0.0524 0.0947 0.0579 0.0211 0.0509 0.0406 0.0680 0.0739 0.0113 0.0461 0.0804 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JTT-DCMUT+G4+F    20    -33426.3950     67187.7900         0.0000    0.5743
+       2  JTT+G4+F          20    -33427.4747     67189.9493         2.1594    0.1951
+       3  JTT-DCMUT+I+G4+F   21    -33426.5999     67190.1999         2.4099    0.1721
+       4  JTT+I+G4+F        21    -33427.6787     67192.3575         4.5675    0.0585
+       5  JTT-DCMUT+I+F     20    -33436.3887     67207.7773        19.9874    0.0000
+       6  JTT+I+F           20    -33437.4709     67209.9417        22.1518    0.0000
+       7  JTT-DCMUT+F       19    -33448.7679     67230.5357        42.7458    0.0000
+       8  JTT+F             19    -33449.8208     67232.6416        44.8517    0.0000
+       9  FLU+G4+F          20    -33457.7607     67250.5213        62.7314    0.0000
+      10  FLU+I+G4+F        21    -33457.8190     67252.6380        64.8480    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              JTT-DCMUT+G4+F
+lnL:                -33426.3950
+Frequencies:        0.0676 0.0361 0.0547 0.0525 0.0303 0.0375 0.0453 0.0594 0.0193 0.0524 0.0947 0.0579 0.0211 0.0509 0.0406 0.0680 0.0739 0.0113 0.0461 0.0804
+Inv. sites prop:    -
+Gamma shape:        0.2790
+Score:              67187.7900
+Weight:             0.5743
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.7693
+Gamma-Inv:          0.2306
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.5693
+Alpha:              0.2759
+Alpha-P.Inv:        0.2814
+P.Inv-Alpha:        0.0216
+Frequencies:        0.0676 0.0361 0.0547 0.0525 0.0303 0.0375 0.0453 0.0594 0.0193 0.0524 0.0947 0.0579 0.0211 0.0509 0.0406 0.0680 0.0739 0.0113 0.0461 0.0804 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200318.aln.concat.faa -d aa -m JTT-DCMUT -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m PROTGAMMAJTT-DCMUTF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200318.aln.concat.faa --model JTT-DCMUT+G4+F
+  > paup -s phylogeny/SARS-CoV-2_200318.aln.concat.faa
+  > iqtree -s phylogeny/SARS-CoV-2_200318.aln.concat.faa -m JTT-DCMUT+G4+F
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC      JTT-DCMUT+G4+F    68367.7423        0.7403
+       AIC      JTT-DCMUT+G4+F    67182.7900        0.5743
+      AICc      JTT-DCMUT+G4+F    67187.7900        0.5743
+
+Execution results written to phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318.out
+Starting tree written to phylogeny/ModelTest-NG/AA/univ/SARS-CoV-2_200318.tree
