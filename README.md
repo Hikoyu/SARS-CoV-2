@@ -79,861 +79,861 @@ SARS-CoV-2
 │   ├── dna_diag_prob_250_exp_110000
 │   └── dna_matrix.scr
 ├── dialign => including open reading frame sequence data and multiple sequence alignment data
-│   ├── SARS-CoV-2_200318.E.aln.fna
-│   ├── SARS-CoV-2_200318.E.fna
-│   ├── SARS-CoV-2_200318.M.aln.fna
-│   ├── SARS-CoV-2_200318.M.fna
-│   ├── SARS-CoV-2_200318.N.aln.fna
-│   ├── SARS-CoV-2_200318.N.fna
-│   ├── SARS-CoV-2_200318.ORF10.aln.fna
-│   ├── SARS-CoV-2_200318.ORF10.fna
-│   ├── SARS-CoV-2_200318.ORF3a.aln.fna
-│   ├── SARS-CoV-2_200318.ORF3a.fna
-│   ├── SARS-CoV-2_200318.ORF6.aln.fna
-│   ├── SARS-CoV-2_200318.ORF6.fna
-│   ├── SARS-CoV-2_200318.ORF7a.aln.fna
-│   ├── SARS-CoV-2_200318.ORF7a.fna
-│   ├── SARS-CoV-2_200318.ORF8.aln.fna
-│   ├── SARS-CoV-2_200318.ORF8.fna
-│   ├── SARS-CoV-2_200318.S.aln.fna
-│   ├── SARS-CoV-2_200318.S.fna
-│   ├── SARS-CoV-2_200318.orf1ab_D.aln.fna
-│   ├── SARS-CoV-2_200318.orf1ab_D.fna
-│   ├── SARS-CoV-2_200318.orf1ab_U.aln.fna
-│   ├── SARS-CoV-2_200318.orf1ab_U.fna
+│   ├── SARS-CoV-2_200320.E.aln.fna
+│   ├── SARS-CoV-2_200320.E.fna
+│   ├── SARS-CoV-2_200320.M.aln.fna
+│   ├── SARS-CoV-2_200320.M.fna
+│   ├── SARS-CoV-2_200320.N.aln.fna
+│   ├── SARS-CoV-2_200320.N.fna
+│   ├── SARS-CoV-2_200320.ORF10.aln.fna
+│   ├── SARS-CoV-2_200320.ORF10.fna
+│   ├── SARS-CoV-2_200320.ORF3a.aln.fna
+│   ├── SARS-CoV-2_200320.ORF3a.fna
+│   ├── SARS-CoV-2_200320.ORF6.aln.fna
+│   ├── SARS-CoV-2_200320.ORF6.fna
+│   ├── SARS-CoV-2_200320.ORF7a.aln.fna
+│   ├── SARS-CoV-2_200320.ORF7a.fna
+│   ├── SARS-CoV-2_200320.ORF8.aln.fna
+│   ├── SARS-CoV-2_200320.ORF8.fna
+│   ├── SARS-CoV-2_200320.S.aln.fna
+│   ├── SARS-CoV-2_200320.S.fna
+│   ├── SARS-CoV-2_200320.orf1ab_D.aln.fna
+│   ├── SARS-CoV-2_200320.orf1ab_D.fna
+│   ├── SARS-CoV-2_200320.orf1ab_U.aln.fna
+│   ├── SARS-CoV-2_200320.orf1ab_U.fna
 │   ├── msa_list.txt
 │   ├── parsimony-informative_site_position_list.txt
 │   ├── parsimony-informative_sites.txt
 │   ├── variable_site_position_list.txt
 │   └── variable_sites.txt
 ├── fate
-│   └── SARS-CoV-2_200318.orf.bed => open reading frame annotation data
+│   └── SARS-CoV-2_200320.orf.bed => open reading frame annotation data
 ├── genome => including SARS-CoV-2 genome sequence data
-│   ├── SARS-CoV-2_200318.fna
-│   ├── SARS-CoV-2_200318.fna.fai
-│   ├── SARS-CoV-2_200318.fna.nhr
-│   ├── SARS-CoV-2_200318.fna.nin
-│   ├── SARS-CoV-2_200318.fna.nsq
+│   ├── SARS-CoV-2_200320.fna
+│   ├── SARS-CoV-2_200320.fna.fai
+│   ├── SARS-CoV-2_200320.fna.nhr
+│   ├── SARS-CoV-2_200320.fna.nin
+│   ├── SARS-CoV-2_200320.fna.nsq
 │   └── sample_list.txt
 ├── phylogeny
 │   ├── ModelTest-NG
 │   │   ├── AA
 │   │   │   ├── part => including model test data using partitioned model for each ORF
-│   │   │   │   ├── SARS-CoV-2_200318.ckp
-│   │   │   │   ├── SARS-CoV-2_200318.log
-│   │   │   │   ├── SARS-CoV-2_200318.out
-│   │   │   │   ├── SARS-CoV-2_200318.part.aic
-│   │   │   │   ├── SARS-CoV-2_200318.part.aicc
-│   │   │   │   ├── SARS-CoV-2_200318.part.bic
-│   │   │   │   ├── SARS-CoV-2_200318.part.txt
-│   │   │   │   └── SARS-CoV-2_200318.tree
+│   │   │   │   ├── SARS-CoV-2_200320.ckp
+│   │   │   │   ├── SARS-CoV-2_200320.log
+│   │   │   │   ├── SARS-CoV-2_200320.out
+│   │   │   │   ├── SARS-CoV-2_200320.part.aic
+│   │   │   │   ├── SARS-CoV-2_200320.part.aicc
+│   │   │   │   ├── SARS-CoV-2_200320.part.bic
+│   │   │   │   ├── SARS-CoV-2_200320.part.txt
+│   │   │   │   └── SARS-CoV-2_200320.tree
 │   │   │   └── univ => including model test data without using partitioned model
-│   │   │       ├── SARS-CoV-2_200318.ckp
-│   │   │       ├── SARS-CoV-2_200318.log
-│   │   │       ├── SARS-CoV-2_200318.out
-│   │   │       └── SARS-CoV-2_200318.tree
+│   │   │       ├── SARS-CoV-2_200320.ckp
+│   │   │       ├── SARS-CoV-2_200320.log
+│   │   │       ├── SARS-CoV-2_200320.out
+│   │   │       └── SARS-CoV-2_200320.tree
 │   │   └── DNA
 │   │       ├── part
 │   │       │   ├── 3rd => including model test data using partitioned model for each ORF and also 1st/2nd and 3rd codon position
-│   │       │   │   ├── SARS-CoV-2_200318.ckp
-│   │       │   │   ├── SARS-CoV-2_200318.log
-│   │       │   │   ├── SARS-CoV-2_200318.out
-│   │       │   │   ├── SARS-CoV-2_200318.part.aic
-│   │       │   │   ├── SARS-CoV-2_200318.part.aicc
-│   │       │   │   ├── SARS-CoV-2_200318.part.bic
-│   │       │   │   ├── SARS-CoV-2_200318.part.txt
-│   │       │   │   └── SARS-CoV-2_200318.tree
+│   │       │   │   ├── SARS-CoV-2_200320.ckp
+│   │       │   │   ├── SARS-CoV-2_200320.log
+│   │       │   │   ├── SARS-CoV-2_200320.out
+│   │       │   │   ├── SARS-CoV-2_200320.part.aic
+│   │       │   │   ├── SARS-CoV-2_200320.part.aicc
+│   │       │   │   ├── SARS-CoV-2_200320.part.bic
+│   │       │   │   ├── SARS-CoV-2_200320.part.txt
+│   │       │   │   └── SARS-CoV-2_200320.tree
 │   │       │   ├── sep => including phylogenetic analysis data using partitioned model for each ORF and also each codon position
-│   │       │   │   ├── SARS-CoV-2_200318.ckp
-│   │       │   │   ├── SARS-CoV-2_200318.log
-│   │       │   │   ├── SARS-CoV-2_200318.out
-│   │       │   │   ├── SARS-CoV-2_200318.part.aic
-│   │       │   │   ├── SARS-CoV-2_200318.part.aicc
-│   │       │   │   ├── SARS-CoV-2_200318.part.bic
-│   │       │   │   ├── SARS-CoV-2_200318.part.txt
-│   │       │   │   └── SARS-CoV-2_200318.tree
+│   │       │   │   ├── SARS-CoV-2_200320.ckp
+│   │       │   │   ├── SARS-CoV-2_200320.log
+│   │       │   │   ├── SARS-CoV-2_200320.out
+│   │       │   │   ├── SARS-CoV-2_200320.part.aic
+│   │       │   │   ├── SARS-CoV-2_200320.part.aicc
+│   │       │   │   ├── SARS-CoV-2_200320.part.bic
+│   │       │   │   ├── SARS-CoV-2_200320.part.txt
+│   │       │   │   └── SARS-CoV-2_200320.tree
 │   │       │   └── uni => including model test data using partitioned model for each ORF
-│   │       │       ├── SARS-CoV-2_200318.ckp
-│   │       │       ├── SARS-CoV-2_200318.log
-│   │       │       ├── SARS-CoV-2_200318.out
-│   │       │       ├── SARS-CoV-2_200318.part.aic
-│   │       │       ├── SARS-CoV-2_200318.part.aicc
-│   │       │       ├── SARS-CoV-2_200318.part.bic
-│   │       │       ├── SARS-CoV-2_200318.part.txt
-│   │       │       └── SARS-CoV-2_200318.tree
+│   │       │       ├── SARS-CoV-2_200320.ckp
+│   │       │       ├── SARS-CoV-2_200320.log
+│   │       │       ├── SARS-CoV-2_200320.out
+│   │       │       ├── SARS-CoV-2_200320.part.aic
+│   │       │       ├── SARS-CoV-2_200320.part.aicc
+│   │       │       ├── SARS-CoV-2_200320.part.bic
+│   │       │       ├── SARS-CoV-2_200320.part.txt
+│   │       │       └── SARS-CoV-2_200320.tree
 │   │       └── univ
 │   │           ├── 3rd => including model test data using partitioned model for each ORF and also 1st/2nd and 3rd codon position
-│   │           │   ├── SARS-CoV-2_200318.ckp
-│   │           │   ├── SARS-CoV-2_200318.log
-│   │           │   ├── SARS-CoV-2_200318.out
-│   │           │   ├── SARS-CoV-2_200318.part.aic
-│   │           │   ├── SARS-CoV-2_200318.part.aicc
-│   │           │   ├── SARS-CoV-2_200318.part.bic
-│   │           │   ├── SARS-CoV-2_200318.part.txt
-│   │           │   └── SARS-CoV-2_200318.tree
+│   │           │   ├── SARS-CoV-2_200320.ckp
+│   │           │   ├── SARS-CoV-2_200320.log
+│   │           │   ├── SARS-CoV-2_200320.out
+│   │           │   ├── SARS-CoV-2_200320.part.aic
+│   │           │   ├── SARS-CoV-2_200320.part.aicc
+│   │           │   ├── SARS-CoV-2_200320.part.bic
+│   │           │   ├── SARS-CoV-2_200320.part.txt
+│   │           │   └── SARS-CoV-2_200320.tree
 │   │           ├── sep => including model test data using partitioned model for each codon position
-│   │           │   ├── SARS-CoV-2_200318.ckp
-│   │           │   ├── SARS-CoV-2_200318.log
-│   │           │   ├── SARS-CoV-2_200318.out
-│   │           │   ├── SARS-CoV-2_200318.part.aic
-│   │           │   ├── SARS-CoV-2_200318.part.aicc
-│   │           │   ├── SARS-CoV-2_200318.part.bic
-│   │           │   ├── SARS-CoV-2_200318.part.txt
-│   │           │   └── SARS-CoV-2_200318.tree
+│   │           │   ├── SARS-CoV-2_200320.ckp
+│   │           │   ├── SARS-CoV-2_200320.log
+│   │           │   ├── SARS-CoV-2_200320.out
+│   │           │   ├── SARS-CoV-2_200320.part.aic
+│   │           │   ├── SARS-CoV-2_200320.part.aicc
+│   │           │   ├── SARS-CoV-2_200320.part.bic
+│   │           │   ├── SARS-CoV-2_200320.part.txt
+│   │           │   └── SARS-CoV-2_200320.tree
 │   │           └── uni => including model test data without using partitioned model
-│   │               ├── SARS-CoV-2_200318.ckp
-│   │               ├── SARS-CoV-2_200318.log
-│   │               ├── SARS-CoV-2_200318.out
-│   │               └── SARS-CoV-2_200318.tree
+│   │               ├── SARS-CoV-2_200320.ckp
+│   │               ├── SARS-CoV-2_200320.log
+│   │               ├── SARS-CoV-2_200320.out
+│   │               └── SARS-CoV-2_200320.tree
 │   ├── RAxML-NG
 │   │   ├── AA
 │   │   │   ├── part => including phylogenetic analysis data using partitioned model for each ORF
-│   │   │   │   ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │   │   │   ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │   │   │   ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │   │   │   ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.parse.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │   │   │   ├── SARS-CoV-2_200318.raxml.rba
-│   │   │   │   ├── SARS-CoV-2_200318.raxml.reduced.partition
-│   │   │   │   ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │   │   │   ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │   │   │   ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │   │   │   ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │   │   │   └── SARS-CoV-2_200318.support.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │   │   │   ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │   │   │   ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │   │   │   ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.parse.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │   │   │   ├── SARS-CoV-2_200320.raxml.rba
+│   │   │   │   ├── SARS-CoV-2_200320.raxml.reduced.partition
+│   │   │   │   ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │   │   │   ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │   │   │   ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │   │   │   ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │   │   │   └── SARS-CoV-2_200320.support.raxml.log
 │   │   │   └── univ => including phylogenetic analysis data without using partitioned model
-│   │   │       ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │   │       ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │   │       ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │   │       ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.parse.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │   │       ├── SARS-CoV-2_200318.raxml.rba
-│   │   │       ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │   │       ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │   │       ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │   │       ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │   │       └── SARS-CoV-2_200318.support.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │   │       ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │   │       ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │   │       ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.parse.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │   │       ├── SARS-CoV-2_200320.raxml.rba
+│   │   │       ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │   │       ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │   │       ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │   │       ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │   │       └── SARS-CoV-2_200320.support.raxml.log
 │   │   └── DNA
 │   │       ├── part
 │   │       │   ├── 3rd => including phylogenetic analysis data using partitioned model for each ORF and also 1st/2nd and 3rd codon position
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.parse.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.rba
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.reduced.partition
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │       │   │   ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │       │   │   └── SARS-CoV-2_200318.support.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.parse.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.rba
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.reduced.partition
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │       │   │   ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │       │   │   └── SARS-CoV-2_200320.support.raxml.log
 │   │       │   ├── sep => including phylogenetic analysis data using partitioned model for each ORF and also each codon position
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │       │   │   ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.parse.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.rba
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.reduced.partition
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │       │   │   ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │       │   │   ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │       │   │   ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │       │   │   └── SARS-CoV-2_200318.support.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │       │   │   ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.parse.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.rba
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.reduced.partition
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │       │   │   ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │       │   │   ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │       │   │   ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │       │   │   └── SARS-CoV-2_200320.support.raxml.log
 │   │       │   └── uni => including phylogenetic analysis data using partitioned model for each ORF
-│   │       │       ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │       │       ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │       │       ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │       │       ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.parse.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │       │       ├── SARS-CoV-2_200318.raxml.rba
-│   │       │       ├── SARS-CoV-2_200318.raxml.reduced.partition
-│   │       │       ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │       │       ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │       │       ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │       │       ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │       │       └── SARS-CoV-2_200318.support.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │       │       ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │       │       ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │       │       ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.parse.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │       │       ├── SARS-CoV-2_200320.raxml.rba
+│   │       │       ├── SARS-CoV-2_200320.raxml.reduced.partition
+│   │       │       ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │       │       ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │       │       ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │       │       ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │       │       └── SARS-CoV-2_200320.support.raxml.log
 │   │       └── univ
 │   │           ├── 3rd => including phylogenetic analysis data using partitioned model for 1st/2nd and 3rd codon position
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.parse.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.raxml.rba
-│   │           │   ├── SARS-CoV-2_200318.raxml.reduced.partition
-│   │           │   ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │           │   ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │           │   ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │           │   └── SARS-CoV-2_200318.support.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.parse.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.raxml.rba
+│   │           │   ├── SARS-CoV-2_200320.raxml.reduced.partition
+│   │           │   ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │           │   ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │           │   ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │           │   └── SARS-CoV-2_200320.support.raxml.log
 │   │           ├── sep => including phylogenetic analysis data using partitioned model for each codon position
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │           │   ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.parse.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │           │   ├── SARS-CoV-2_200318.raxml.rba
-│   │           │   ├── SARS-CoV-2_200318.raxml.reduced.partition
-│   │           │   ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │           │   ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │           │   ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │           │   ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │           │   └── SARS-CoV-2_200318.support.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │           │   ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.parse.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │           │   ├── SARS-CoV-2_200320.raxml.rba
+│   │           │   ├── SARS-CoV-2_200320.raxml.reduced.partition
+│   │           │   ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │           │   ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │           │   ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │           │   ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │           │   └── SARS-CoV-2_200320.support.raxml.log
 │   │           └── uni => including phylogenetic analysis data without using partitioned model
-│   │               ├── SARS-CoV-2_200318.0.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.0.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.0.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.0.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.0.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.1.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.1.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.1.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.1.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.1.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.10.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.10.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.10.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.10.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.10.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.11.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.11.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.11.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.11.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.11.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.2.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.2.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.2.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.2.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.2.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.3.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.3.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.3.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.3.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.3.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.4.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.4.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.4.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.4.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.4.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.5.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.5.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.5.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.5.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.5.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.6.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.6.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.6.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.6.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.6.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.7.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.7.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.7.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.7.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.7.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.8.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.8.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.8.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.8.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.8.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.9.raxml.bestModel
-│   │               ├── SARS-CoV-2_200318.9.raxml.bestTree
-│   │               ├── SARS-CoV-2_200318.9.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.9.raxml.mlTrees
-│   │               ├── SARS-CoV-2_200318.9.raxml.startTree
-│   │               ├── SARS-CoV-2_200318.bootstrap.0.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.1.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.10.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.11.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.2.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.3.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.4.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.5.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.6.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.7.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.8.raxml.log
-│   │               ├── SARS-CoV-2_200318.bootstrap.9.raxml.log
-│   │               ├── SARS-CoV-2_200318.bsconverge.raxml.log
-│   │               ├── SARS-CoV-2_200318.parse.raxml.log
-│   │               ├── SARS-CoV-2_200318.raxml.bootstraps
-│   │               ├── SARS-CoV-2_200318.raxml.rba
-│   │               ├── SARS-CoV-2_200318.raxml.reduced.phy
-│   │               ├── SARS-CoV-2_200318.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
-│   │               ├── SARS-CoV-2_200318.search.0.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.1.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.10.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.11.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.2.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.3.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.4.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.5.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.6.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.7.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.8.raxml.log
-│   │               ├── SARS-CoV-2_200318.search.9.raxml.log
-│   │               └── SARS-CoV-2_200318.support.raxml.log
-│   ├── SARS-CoV-2_200318.aln.concat.faa
-│   └── SARS-CoV-2_200318.aln.concat.fna
+│   │               ├── SARS-CoV-2_200320.0.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.0.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.0.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.0.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.0.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.1.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.1.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.1.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.1.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.1.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.10.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.10.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.10.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.10.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.10.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.11.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.11.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.11.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.11.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.11.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.2.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.2.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.2.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.2.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.2.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.3.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.3.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.3.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.3.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.3.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.4.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.4.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.4.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.4.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.4.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.5.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.5.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.5.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.5.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.5.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.6.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.6.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.6.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.6.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.6.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.7.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.7.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.7.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.7.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.7.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.8.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.8.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.8.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.8.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.8.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.9.raxml.bestModel
+│   │               ├── SARS-CoV-2_200320.9.raxml.bestTree
+│   │               ├── SARS-CoV-2_200320.9.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.9.raxml.mlTrees
+│   │               ├── SARS-CoV-2_200320.9.raxml.startTree
+│   │               ├── SARS-CoV-2_200320.bootstrap.0.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.1.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.10.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.11.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.2.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.3.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.4.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.5.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.6.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.7.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.8.raxml.log
+│   │               ├── SARS-CoV-2_200320.bootstrap.9.raxml.log
+│   │               ├── SARS-CoV-2_200320.bsconverge.raxml.log
+│   │               ├── SARS-CoV-2_200320.parse.raxml.log
+│   │               ├── SARS-CoV-2_200320.raxml.bootstraps
+│   │               ├── SARS-CoV-2_200320.raxml.rba
+│   │               ├── SARS-CoV-2_200320.raxml.reduced.phy
+│   │               ├── SARS-CoV-2_200320.raxml.support.nwk => maximum-likelihood phylogeny data with bootstrap values
+│   │               ├── SARS-CoV-2_200320.search.0.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.1.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.10.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.11.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.2.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.3.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.4.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.5.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.6.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.7.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.8.raxml.log
+│   │               ├── SARS-CoV-2_200320.search.9.raxml.log
+│   │               └── SARS-CoV-2_200320.support.raxml.log
+│   ├── SARS-CoV-2_200320.aln.concat.faa
+│   └── SARS-CoV-2_200320.aln.concat.fna
 ├── ref => including reference open reading frame annotation data
 │   ├── MN908947.orf.bed
 │   ├── MN908947.orf.faa
@@ -967,6 +967,10 @@ SARS-CoV-2
 | LC528233        | Genbank         | 10-Feb-2020     | Japan       | Kanagawa      | Diamond Princess cruise ship?                                          |
 | LC528232        | Genbank         | 10-Feb-2020     | Japan       | Kanagawa      | Diamond Princess cruise ship?                                          |
 | LC529905        | Genbank         |    Jan-2020     | Japan       | Tokyo         |                                                                        |
+| MT192773        | Genbank         | 22-Jan-2020     | Viet Nam    | Ho Chi Minh   |                                                                        |
+| MT192772        | Genbank         | 22-Jan-2020     | Viet Nam    | Ho Chi Minh   |                                                                        |
+| MT192765        | Genbank         | 11-Mar-2020     | USA         | California    |                                                                        |
+| MT192759        | Genbank         | 25-Jan-2020     | Taiwan      |               |                                                                        |
 | MT123293        | Genbank         | 29-Jan-2020     | China       | Guangzhou     |                                                                        |
 | MT123292        | Genbank         | 27-Jan-2020     | China       | Guangzhou     |                                                                        |
 | MT123291        | Genbank         | 29-Jan-2020     | China       | Guangzhou     |                                                                        |
@@ -1062,14 +1066,14 @@ Meta data were supplemented from National Genomics Data Center (https://bigd.big
 ## Summary of maximum-likelihood phylogenetic analyses
 | No. | Data type | Partition                                        | Final LogLikelihood | AIC score     | AICc score    | BIC socre     | # Free parameters |
 | --- | --------- | ------------------------------------------------ | ------------------- | ------------- | ------------- | ------------- | ----------------- |
-| 1   | DNA       | No partition                                     | -59232.477912       | 118772.955823 | 118774.602428 | 120048.097626 | 154               |
-| 2   | DNA       | Separate 3rd codon position and others           | -56820.984638       | 113969.969277 | 113971.836578 | 115327.912496 | 164               |
-| 3   | DNA       | Separate each codon position                     | -56410.587382       | 113165.174764 | 113167.228672 | 114589.359115 | 172               |
-| 4   | DNA       | Separate each ORF                                | -59780.961028       | 119951.922056 | 119954.562288 | 121566.549664 | 195               |
-| 5   | DNA       | Separate each ORF, 3rd codon position and others | -56467.248921       | 113398.497841 | 113402.236800 | 115319.490688 | 232               |
-| 6   | DNA       | Separate each ORF, each codon position           | -56095.493798       | 112712.987597 | 112717.722209 | 114874.104549 | 261               |
-| 7   | AA        | No partition                                     | -33424.161700       |  67178.323399 |  67184.065538 |  68363.105822 | 165               |
-| 8   | AA        | Separate each ORF                                | -33354.346518       |  67068.693035 |  67075.533980 |  68361.182951 | 180               |
+| 1   | DNA       | No partition                                     | -59284.685031       | 118893.370062 | 118895.192108 | 120234.752998 | 162               |
+| 2   | DNA       | Separate 3rd codon position and others           | -56877.337100       | 114098.674201 | 114100.728109 | 115522.858552 | 172               |
+| 3   | DNA       | Separate each codon position                     | -56466.966912       | 113293.933823 | 113296.183280 | 114784.359308 | 180               |
+| 4   | DNA       | Separate each ORF                                | -59849.040154       | 120100.080308 | 120102.885670 | 121764.388766 | 201               |
+| 5   | DNA       | Separate each ORF, 3rd codon position and others | -56521.449588       | 113526.899175 | 113530.968091 | 115530.693437 | 242               |
+| 6   | DNA       | Separate each ORF, each codon position           | -56149.612346       | 112839.224693 | 112844.292394 | 115074.862919 | 270               |
+| 7   | AA        | No partition                                     | -33462.838880       |  67271.677760 |  67277.993748 |  68513.904179 | 173               |
+| 8   | AA        | Separate each ORF                                | -33394.356618       |  67164.713236 |  67172.180295 |  68514.647148 | 188               |
 
 ## Release notes
 | Release Date | Contents                                                                                     |
@@ -1078,6 +1082,7 @@ Meta data were supplemented from National Genomics Data Center (https://bigd.big
 | 12-Mar-2020  | update genome sequence data, improve parallelization efficiency and usability of the scripts |
 | 18-Mar-2020  | update genome sequence data                                                                  |
 | 20-Mar-2020  | update genome sequence data, remove USA-CruiseA data from the analyses                       |
+| 23-Mar-2020  | update genome sequence data                                                                  |
 
 ## License
 All in-house scripts in `script/` direcory are released under the MIT license.

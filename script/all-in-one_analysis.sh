@@ -6,7 +6,7 @@
 #########################
 # Settings for analyses #
 #########################
-analysis_prefix="SARS-CoV-2_200318"
+analysis_prefix="SARS-CoV-2_200320"
 orf_reference_prefix="ref/MN908947.orf"
 genome_sequence_file="genome/$analysis_prefix.fna"
 ref_sample="MN908947"

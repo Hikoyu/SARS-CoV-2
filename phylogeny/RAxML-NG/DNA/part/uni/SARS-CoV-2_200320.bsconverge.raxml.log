@@ -1,0 +1,53 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 21-Mar-2020 22:43:16 as follows:
+
+raxml-ng --threads 1 --bsconverge --bs-trees phylogeny/RAxML-NG/DNA/part/uni/SARS-CoV-2_200320.raxml.bootstraps --prefix phylogeny/RAxML-NG/DNA/part/uni/SARS-CoV-2_200320 --outgroup MG772933.1
+
+Analysis options:
+  run mode: A posteriori bootstrap convergence test
+  start tree(s): 
+  random seed: 1584798196
+  SIMD kernels: AVX2
+  parallelization: NONE/sequential
+
+Reading bootstrap trees from file: phylogeny/RAxML-NG/DNA/part/uni/SARS-CoV-2_200320.raxml.bootstraps
+Loaded 1000 trees with 78 taxa.
+
+Performing bootstrap convergence assessment using autoMRE criterion
+
+ # trees        avg WRF       avg WRF in %       # perms: wrf <= 3.00 %     converged?  
+      50        284.947              9.214                            0        NO
+     100        417.103              6.691                            0        NO
+     150        493.770              5.223                            0        NO
+     200        587.065              4.590                            0        NO
+     250        702.870              4.336                            1        NO
+     300        742.576              3.805                           44        NO
+     350        786.702              3.442                          202        NO
+     400        845.129              3.234                          326        NO
+     450        970.117              3.286                          273        NO
+     500       1058.612              3.226                          314        NO
+     550       1153.270              3.191                          311        NO
+     600       1093.897              2.769                          683        NO
+     650       1119.095              2.609                          807        NO
+     700       1196.369              2.584                          831        NO
+     750       1234.550              2.482                          917        NO
+     800       1302.586              2.450                          923        NO
+     850       1277.643              2.258                          947        NO
+     900       1343.066              2.244                          949        NO
+     950       1326.536              2.094                          978        NO
+    1000       1486.851              2.228                          944        NO
+Bootstopping test did not converge after 1000 trees
+
+
+Execution log saved to: /home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/part/uni/SARS-CoV-2_200320.raxml.log
+
+Analysis started: 21-Mar-2020 22:43:16 / finished: 21-Mar-2020 22:48:47
+
+Elapsed time: 331.751 seconds
+

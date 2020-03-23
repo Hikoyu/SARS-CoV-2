@@ -1,0 +1,206 @@
+
+RAxML-NG v. 0.9.0 released on 20.05.2019 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+RAxML-NG was called at 21-Mar-2020 22:49:29 as follows:
+
+raxml-ng --threads 1 --parse --prefix phylogeny/RAxML-NG/DNA/part/3rd/SARS-CoV-2_200320 --msa phylogeny/SARS-CoV-2_200320.aln.concat.fna --msa-format FASTA --data-type DNA --model phylogeny/ModelTest-NG/DNA/part/3rd/SARS-CoV-2_200320.part.bic
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1584798569
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: NONE/sequential
+
+[00:00:00] Reading alignment from file: phylogeny/SARS-CoV-2_200320.aln.concat.fna
+[00:00:00] Loaded alignment with 78 taxa and 29148 sites
+
+WARNING: Sequences LC522974.1 and LC522975.1 are exactly identical!
+WARNING: Sequences LR757995.1 and MT066175.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN908947.3 are exactly identical!
+WARNING: Sequences LR757996.1 and MN988668.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN988669.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN996528.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MN996530.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT019530.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT019532.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT039873.1 are exactly identical!
+WARNING: Sequences LR757996.1 and MT093631.2 are exactly identical!
+WARNING: Sequences LR757996.1 and MT192759.1 are exactly identical!
+WARNING: Sequences MN985325.1 and MT020880.1 are exactly identical!
+WARNING: Sequences MN985325.1 and MT020881.1 are exactly identical!
+WARNING: Sequences MT027062.1 and MT027063.1 are exactly identical!
+WARNING: Sequences MT135041.1 and MT135042.1 are exactly identical!
+WARNING: Sequences MT135041.1 and MT135044.1 are exactly identical!
+WARNING: Sequences MT163717.1 and MT163718.1 are exactly identical!
+WARNING: Sequences MT192772.1 and MT192773.1 are exactly identical!
+WARNING: Duplicate sequences found: 19
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/part/3rd/SARS-CoV-2_200320.raxml.reduced.phy
+
+NOTE: The corresponding reduced partition file was saved to:
+/home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/part/3rd/SARS-CoV-2_200320.raxml.reduced.partition
+
+Alignment comprises 22 partitions and 642 patterns
+
+Partition 0: orf1ab_U
+Model: TIM2+I+B
+Alignment sites / patterns: 8810 / 87
+Gaps: 0.10 %
+Invariant sites: 96.05 %
+
+Partition 1: orf1ab_U_p3
+Model: TN93+FO+G4m+B
+Alignment sites / patterns: 4405 / 85
+Gaps: 0.10 %
+Invariant sites: 73.96 %
+
+Partition 2: orf1ab_D
+Model: TN93+FO+I+G4m+B
+Alignment sites / patterns: 5394 / 48
+Gaps: 0.04 %
+Invariant sites: 95.70 %
+
+Partition 3: orf1ab_D_p3
+Model: TPM3uf+FO+G4m+B
+Alignment sites / patterns: 2697 / 59
+Gaps: 0.04 %
+Invariant sites: 62.51 %
+
+Partition 4: S
+Model: HKY+FO+G4m+B
+Alignment sites / patterns: 2548 / 57
+Gaps: 0.04 %
+Invariant sites: 86.62 %
+
+Partition 5: S_p3
+Model: HKY+FO+I+B
+Alignment sites / patterns: 1274 / 69
+Gaps: 0.04 %
+Invariant sites: 50.24 %
+
+Partition 6: ORF3a
+Model: JC+I+G4m+B
+Alignment sites / patterns: 552 / 23
+Gaps: 0.00 %
+Invariant sites: 93.12 %
+
+Partition 7: ORF3a_p3
+Model: HKY+FO+I+B
+Alignment sites / patterns: 276 / 22
+Gaps: 0.00 %
+Invariant sites: 70.65 %
+
+Partition 8: E
+Model: JC+B
+Alignment sites / patterns: 152 / 6
+Gaps: 0.00 %
+Invariant sites: 98.68 %
+
+Partition 9: E_p3
+Model: JC+B
+Alignment sites / patterns: 76 / 6
+Gaps: 0.00 %
+Invariant sites: 97.37 %
+
+Partition 10: M
+Model: JC+I+G4m+B
+Alignment sites / patterns: 446 / 12
+Gaps: 0.01 %
+Invariant sites: 97.31 %
+
+Partition 11: M_p3
+Model: K80+I+B
+Alignment sites / patterns: 223 / 28
+Gaps: 0.01 %
+Invariant sites: 78.03 %
+
+Partition 12: ORF6
+Model: JC+B
+Alignment sites / patterns: 124 / 7
+Gaps: 0.00 %
+Invariant sites: 95.97 %
+
+Partition 13: ORF6_p3
+Model: JC+B
+Alignment sites / patterns: 62 / 9
+Gaps: 0.00 %
+Invariant sites: 88.71 %
+
+Partition 14: ORF7a
+Model: K80+B
+Alignment sites / patterns: 244 / 14
+Gaps: 0.00 %
+Invariant sites: 91.80 %
+
+Partition 15: ORF7a_p3
+Model: HKY+FO+I+B
+Alignment sites / patterns: 122 / 16
+Gaps: 0.00 %
+Invariant sites: 78.69 %
+
+Partition 16: ORF8
+Model: TN93ef+I+G4m+B
+Alignment sites / patterns: 244 / 17
+Gaps: 0.00 %
+Invariant sites: 94.67 %
+
+Partition 17: ORF8_p3
+Model: HKY+FO+B
+Alignment sites / patterns: 122 / 16
+Gaps: 0.00 %
+Invariant sites: 69.67 %
+
+Partition 18: N
+Model: HKY+FO+I+B
+Alignment sites / patterns: 840 / 21
+Gaps: 0.00 %
+Invariant sites: 95.71 %
+
+Partition 19: N_p3
+Model: HKY+FO+G4m+B
+Alignment sites / patterns: 420 / 29
+Gaps: 0.00 %
+Invariant sites: 76.67 %
+
+Partition 20: ORF10
+Model: JC+B
+Alignment sites / patterns: 78 / 6
+Gaps: 0.00 %
+Invariant sites: 97.44 %
+
+Partition 21: ORF10_p3
+Model: JC+B
+Alignment sites / patterns: 39 / 5
+Gaps: 0.00 %
+Invariant sites: 97.44 %
+
+
+NOTE: Binary MSA file created: phylogeny/RAxML-NG/DNA/part/3rd/SARS-CoV-2_200320.raxml.rba
+
+* Estimated memory requirements                : 8 MB
+
+* Recommended number of threads / MPI processes: 2
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/hikoyu/analysis/Genome/SARS-CoV-2/phylogeny/RAxML-NG/DNA/part/3rd/SARS-CoV-2_200320.raxml.log
+
+Analysis started: 21-Mar-2020 22:49:29 / finished: 21-Mar-2020 22:49:29
+
+Elapsed time: 0.093 seconds
+
