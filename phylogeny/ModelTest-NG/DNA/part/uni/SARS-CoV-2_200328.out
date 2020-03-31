@@ -1,0 +1,1563 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.6
+
+Input data:
+  MSA:        phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            80
+  #sites:           29148
+  #patterns (sum):  473
+  Max. thread mem:  5 MB
+
+Output:
+  Log:           phylogeny/ModelTest-NG/DNA/part/uni/SARS-CoV-2_200328.log
+  Starting tree: phylogeny/ModelTest-NG/DNA/part/uni/SARS-CoV-2_200328.tree
+  Results:       phylogeny/ModelTest-NG/DNA/part/uni/SARS-CoV-2_200328.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          4/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+Partitions:    phylogeny/ModelTest-NG/DNA/part/uni/SARS-CoV-2_200328.part.txt
+               11 partitions
+                 11 DNA partitions
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+I+G4          8    -26000.1233     53696.4699         0.0000    0.8833
+       2  TrN+I+G4           7    -26007.9218     53701.7869         5.3170    0.0619
+       3  TIM3+I+G4          8    -26003.0005     53702.2244         5.7545    0.0497
+       4  GTR+I+G4          10    -25995.4075     53707.5986        11.1287    0.0034
+       5  TIM1+I+G4          8    -26006.5761     53709.3756        12.9057    0.0014
+       6  TIM2+I             7    -26013.1485     53712.2401        15.7702    0.0003
+       7  TrN+I              6    -26022.7839     53721.2308        24.7609    0.0000
+       8  TIM3+I             7    -26017.7027     53721.3486        24.8787    0.0000
+       9  GTR+I              9    -26007.7526     53722.0087        25.5388    0.0000
+      10  TIM2+G4            7    -26018.1625     53722.2682        25.7983    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TIM2+I+G4
+lnL:                -26000.1233
+Frequencies:        0.2976 0.1746 0.2002 0.3275
+Subst. Rates:       1.8281 8.4599 1.8281 1.0000 31.0673 1.0000 
+Inv. sites prop:    0.7464
+Gamma shape:        1.6117
+Score:              53696.4699
+Weight:             0.8833
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0003
+Gamma:              0.0000
+Gamma-Inv:          0.9997
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7815
+Alpha:              0.0221
+Alpha-P.Inv:        1.5315
+P.Inv-Alpha:        0.7412
+Frequencies:        0.2978 0.1747 0.2000 0.3275 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -25995.4075     52324.8150         0.0000    0.9345
+       2  TIM2+I+G4          8    -26000.1233     52330.2465         5.4316    0.0618
+       3  TIM3+I+G4          8    -26003.0005     52336.0010        11.1860    0.0035
+       4  TIM1+I+G4          8    -26006.5761     52343.1522        18.3372    0.0001
+       5  TrN+I+G4           7    -26007.9218     52343.8436        19.0287    0.0001
+       6  GTR+I              9    -26007.7526     52347.5052        22.6902    0.0000
+       7  TIM2+I             7    -26013.1485     52354.2969        29.4819    0.0000
+       8  GTR+G4             9    -26013.0090     52358.0179        33.2029    0.0000
+       9  TIM3+I             7    -26017.7027     52363.4054        38.5904    0.0000
+      10  TIM2+G4            7    -26018.1625     52364.3250        39.5100    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -25995.4075
+Frequencies:        0.2974 0.1756 0.2002 0.3268
+Subst. Rates:       1.0155 7.3499 1.9239 0.5751 25.8431 1.0000 
+Inv. sites prop:    0.7422
+Gamma shape:        1.6370
+Score:              52324.8150
+Weight:             0.9345
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7813
+Alpha:              0.0221
+Alpha-P.Inv:        1.6332
+P.Inv-Alpha:        0.7424
+Frequencies:        0.2974 0.1756 0.2002 0.3268 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -25995.4075     52325.8150         0.0000    0.9345
+       2  TIM2+I+G4          8    -26000.1233     52331.2465         5.4316    0.0618
+       3  TIM3+I+G4          8    -26003.0005     52337.0010        11.1860    0.0035
+       4  TIM1+I+G4          8    -26006.5761     52344.1522        18.3372    0.0001
+       5  TrN+I+G4           7    -26007.9218     52344.8436        19.0287    0.0001
+       6  GTR+I              9    -26007.7526     52348.5052        22.6902    0.0000
+       7  TIM2+I             7    -26013.1485     52355.2969        29.4819    0.0000
+       8  GTR+G4             9    -26013.0090     52359.0179        33.2029    0.0000
+       9  TIM3+I             7    -26017.7027     52364.4054        38.5904    0.0000
+      10  TIM2+G4            7    -26018.1625     52365.3250        39.5100    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -25995.4075
+Frequencies:        0.2974 0.1756 0.2002 0.3268
+Subst. Rates:       1.0155 7.3499 1.9239 0.5751 25.8431 1.0000 
+Inv. sites prop:    0.7422
+Gamma shape:        1.6370
+Score:              52325.8150
+Weight:             0.9345
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7813
+Alpha:              0.0221
+Alpha-P.Inv:        1.6332
+P.Inv-Alpha:        0.7424
+Frequencies:        0.2974 0.1756 0.2002 0.3268 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+I+G4          8    -16679.5338     35055.2909         0.0000    0.8297
+       2  GTR+I+G4          10    -16671.3508     35059.4852         4.1943    0.1019
+       3  TIM2+G4            7    -16687.2777     35060.4985         5.2076    0.0614
+       4  GTR+G4             9    -16679.9999     35066.5033        11.2124    0.0030
+       5  TIM2+I             7    -16690.6675     35067.2782        11.9873    0.0021
+       6  TIM1+I+G4          8    -16685.9389     35068.1012        12.8103    0.0014
+       7  TIM3+I+G4          8    -16687.3624     35070.9482        15.6573    0.0003
+       8  TrN+I+G4           7    -16693.7405     35073.4242        18.1333    0.0001
+       9  GTR+I              9    -16683.6797     35073.8629        18.5720    0.0001
+      10  TIM1+G4            7    -16698.1676     35082.2784        26.9875    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TIM2+I+G4
+lnL:                -16679.5338
+Frequencies:        0.2999 0.1759 0.2029 0.3213
+Subst. Rates:       5.7351 19.5205 5.7351 1.0000 98.8587 1.0000 
+Inv. sites prop:    0.7220
+Gamma shape:        1.4527
+Score:              35055.2909
+Weight:             0.8297
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0021
+Gamma:              0.0644
+Gamma-Inv:          0.9334
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7239
+Alpha:              0.1059
+Alpha-P.Inv:        1.4234
+P.Inv-Alpha:        0.7191
+Frequencies:        0.2999 0.1760 0.2029 0.3211 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -16671.3508     33676.7016         0.0000    0.9974
+       2  TIM2+I+G4          8    -16679.5338     33689.0675        12.3660    0.0021
+       3  GTR+G4             9    -16679.9999     33691.9998        15.2983    0.0005
+       4  GTR+I              9    -16683.6797     33699.3594        22.6579    0.0000
+       5  TIM1+I+G4          8    -16685.9389     33701.8778        25.1763    0.0000
+       6  TIM2+G4            7    -16687.2777     33702.5553        25.8538    0.0000
+       7  TIM3+I+G4          8    -16687.3624     33704.7249        28.0233    0.0000
+       8  TIM2+I             7    -16690.6675     33709.3350        32.6335    0.0000
+       9  TrN+I+G4           7    -16693.7405     33715.4810        38.7795    0.0000
+      10  TIM1+G4            7    -16698.1676     33724.3352        47.6336    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -16671.3508
+Frequencies:        0.3000 0.1768 0.2031 0.3201
+Subst. Rates:       1.4627 21.0892 9.2909 1.1443 97.8767 1.0000 
+Inv. sites prop:    0.6958
+Gamma shape:        1.1929
+Score:              33676.7016
+Weight:             0.9974
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0005
+Gamma-Inv:          0.9995
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7096
+Alpha:              0.1078
+Alpha-P.Inv:        1.1934
+P.Inv-Alpha:        0.6959
+Frequencies:        0.3000 0.1768 0.2031 0.3201 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -16671.3508     33677.7016         0.0000    0.9974
+       2  TIM2+I+G4          8    -16679.5338     33690.0675        12.3660    0.0021
+       3  GTR+G4             9    -16679.9999     33692.9998        15.2983    0.0005
+       4  GTR+I              9    -16683.6797     33700.3594        22.6579    0.0000
+       5  TIM1+I+G4          8    -16685.9389     33702.8778        25.1763    0.0000
+       6  TIM2+G4            7    -16687.2777     33703.5553        25.8538    0.0000
+       7  TIM3+I+G4          8    -16687.3624     33705.7249        28.0233    0.0000
+       8  TIM2+I             7    -16690.6675     33710.3350        32.6335    0.0000
+       9  TrN+I+G4           7    -16693.7405     33716.4810        38.7795    0.0000
+      10  TIM1+G4            7    -16698.1676     33725.3352        47.6336    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -16671.3508
+Frequencies:        0.3000 0.1768 0.2031 0.3201
+Subst. Rates:       1.4627 21.0892 9.2909 1.1443 97.8767 1.0000 
+Inv. sites prop:    0.6958
+Gamma shape:        1.1929
+Score:              33677.7016
+Weight:             0.9974
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0005
+Gamma-Inv:          0.9995
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7096
+Alpha:              0.1078
+Alpha-P.Inv:        1.1934
+P.Inv-Alpha:        0.6959
+Frequencies:        0.3000 0.1768 0.2031 0.3201 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+I             7     -9248.3829     20182.7091         0.0000    0.7840
+       2  TIM1+I             7     -9249.7614     20185.4660         2.7570    0.1975
+       3  TIM2+G4            7     -9253.3313     20192.6058         9.8968    0.0056
+       4  TIM2+I+G4          8     -9248.3559     20192.9352        10.2261    0.0047
+       5  TrN+I              6     -9258.7167     20193.0964        10.3873    0.0044
+       6  TIM1+I+G4          8     -9249.2522     20194.7278        12.0188    0.0019
+       7  TIM1+G4            7     -9254.5982     20195.1396        12.4305    0.0016
+       8  GTR+I              9     -9246.3515     20199.2065        16.4974    0.0002
+       9  TIM3+I             7     -9258.3206     20202.5845        19.8754    0.0000
+      10  TrN+G4             6     -9263.5279     20202.7189        20.0099    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TIM2+I
+lnL:                -9248.3829
+Frequencies:        0.2904 0.1911 0.1850 0.3334
+Subst. Rates:       2.4497 4.9955 2.4497 1.0000 15.5850 1.0000 
+Inv. sites prop:    0.6102
+Gamma shape:        -
+Score:              20182.7091
+Weight:             0.7840
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.9862
+Gamma:              0.0072
+Gamma-Inv:          0.0067
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.6115
+Alpha:              0.2056
+Alpha-P.Inv:        37.8686
+P.Inv-Alpha:        0.6026
+Frequencies:        0.2910 0.1911 0.1844 0.3335 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10     -9244.9473     18823.8946         0.0000    0.3497
+       2  GTR+I              9     -9246.3515     18824.7030         0.8084    0.2335
+       3  TIM2+I             7     -9248.3829     18824.7658         0.8713    0.2262
+       4  TIM2+I+G4          8     -9248.3559     18826.7118         2.8172    0.0855
+       5  TIM1+I             7     -9249.7614     18827.5228         3.6282    0.0570
+       6  TIM1+I+G4          8     -9249.2522     18828.5045         4.6099    0.0349
+       7  GTR+G4             9     -9249.4011     18830.8022         6.9077    0.0111
+       8  TIM2+G4            7     -9253.3313     18834.6626        10.7680    0.0016
+       9  TIM1+G4            7     -9254.5982     18837.1964        13.3018    0.0005
+      10  TrN+I              6     -9258.7167     18843.4333        19.5388    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -9244.9473
+Frequencies:        0.2908 0.1917 0.1855 0.3319
+Subst. Rates:       1.6061 7.0324 4.6839 2.1784 22.2988 1.0000 
+Inv. sites prop:    0.5664
+Gamma shape:        2.8716
+Score:              18823.8946
+Weight:             0.3497
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.5167
+Gamma:              0.0131
+Gamma-Inv:          0.4702
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.6212
+Alpha:              0.2044
+Alpha-P.Inv:        11.8452
+P.Inv-Alpha:        0.5757
+Frequencies:        0.2908 0.1918 0.1848 0.3326 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10     -9244.9473     18824.8946         0.0000    0.3497
+       2  GTR+I              9     -9246.3515     18825.7030         0.8084    0.2335
+       3  TIM2+I             7     -9248.3829     18825.7658         0.8713    0.2262
+       4  TIM2+I+G4          8     -9248.3559     18827.7118         2.8172    0.0855
+       5  TIM1+I             7     -9249.7614     18828.5228         3.6282    0.0570
+       6  TIM1+I+G4          8     -9249.2522     18829.5045         4.6099    0.0349
+       7  GTR+G4             9     -9249.4011     18831.8022         6.9077    0.0111
+       8  TIM2+G4            7     -9253.3313     18835.6626        10.7680    0.0016
+       9  TIM1+G4            7     -9254.5982     18838.1964        13.3018    0.0005
+      10  TrN+I              6     -9258.7167     18844.4333        19.5388    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -9244.9473
+Frequencies:        0.2908 0.1917 0.1855 0.3319
+Subst. Rates:       1.6061 7.0324 4.6839 2.1784 22.2988 1.0000 
+Inv. sites prop:    0.5664
+Gamma shape:        2.8716
+Score:              18824.8946
+Weight:             0.3497
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.5167
+Gamma:              0.0131
+Gamma-Inv:          0.4702
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.6212
+Alpha:              0.2044
+Alpha-P.Inv:        11.8452
+P.Inv-Alpha:        0.5757
+Frequencies:        0.2908 0.1918 0.1848 0.3326 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+G4             5     -1741.4835      5148.3499         0.0000    0.4730
+       2  HKY+I              5     -1741.6230      5148.6290         0.2791    0.4114
+       3  TrN+G4             6     -1739.1342      5153.9315         5.5816    0.0290
+       4  TrN+I              6     -1739.1737      5154.0104         5.6605    0.0279
+       5  TPM2uf+G4          6     -1739.9273      5155.5176         7.1677    0.0131
+       6  TPM2uf+I           6     -1739.9357      5155.5345         7.1846    0.0130
+       7  TPM3uf+G4          6     -1740.5840      5156.8310         8.4811    0.0068
+       8  TPM3uf+I           6     -1740.6539      5156.9708         8.6209    0.0064
+       9  TPM1uf+G4          6     -1740.6925      5157.0481         8.6982    0.0061
+      10  TPM1uf+I           6     -1740.8501      5157.3633         9.0134    0.0052
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+G4
+lnL:                -1741.4835
+Frequencies:        0.2643 0.2085 0.1817 0.3454
+Subst. Rates:       1.0000 5.2444 1.0000 1.0000 5.2444 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.0969
+Score:              5148.3499
+Weight:             0.4730
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4649
+Gamma:              0.5294
+Gamma-Inv:          0.0057
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7539
+Alpha:              0.0959
+Alpha-P.Inv:        1.2741
+P.Inv-Alpha:        0.6285
+Frequencies:        0.2647 0.2084 0.1820 0.3449 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010010 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model HKY+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m HKY+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7     -1738.0720      3804.1440         0.0000    0.0762
+       2  TrN+G4             6     -1739.1342      3804.2684         0.1244    0.0716
+       3  TrN+I              6     -1739.1737      3804.3473         0.2033    0.0688
+       4  TIM3+G4            7     -1738.2243      3804.4485         0.3045    0.0654
+       5  TIM3+I             7     -1738.3243      3804.6487         0.5047    0.0592
+       6  TIM1+G4            7     -1738.3407      3804.6815         0.5374    0.0582
+       7  TIM2+I             7     -1738.3720      3804.7440         0.5999    0.0564
+       8  TIM2+I+G4          8     -1737.4948      3804.9895         0.8455    0.0499
+       9  TIM3+I+G4          8     -1737.5578      3805.1156         0.9716    0.0469
+      10  TIM1+I             7     -1738.5806      3805.1612         1.0171    0.0458
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM2+G4
+lnL:                -1738.0720
+Frequencies:        0.2717 0.2046 0.1830 0.3407
+Subst. Rates:       0.5377 2.6935 0.5377 1.0000 5.4435 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.0893
+Score:              3804.1440
+Weight:             0.0762
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.3476
+Gamma:              0.3957
+Gamma-Inv:          0.2567
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7523
+Alpha:              0.0843
+Alpha-P.Inv:        2.2610
+P.Inv-Alpha:        0.6901
+Frequencies:        0.2692 0.2063 0.1838 0.3407 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7     -1738.0720      3805.1440         0.0000    0.0762
+       2  TrN+G4             6     -1739.1342      3805.2684         0.1244    0.0716
+       3  TrN+I              6     -1739.1737      3805.3473         0.2033    0.0688
+       4  TIM3+G4            7     -1738.2243      3805.4485         0.3045    0.0654
+       5  TIM3+I             7     -1738.3243      3805.6487         0.5047    0.0592
+       6  TIM1+G4            7     -1738.3407      3805.6815         0.5374    0.0582
+       7  TIM2+I             7     -1738.3720      3805.7440         0.5999    0.0564
+       8  TIM2+I+G4          8     -1737.4948      3805.9895         0.8455    0.0499
+       9  TIM3+I+G4          8     -1737.5578      3806.1156         0.9716    0.0469
+      10  TIM1+I             7     -1738.5806      3806.1612         1.0171    0.0458
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM2+G4
+lnL:                -1738.0720
+Frequencies:        0.2717 0.2046 0.1830 0.3407
+Subst. Rates:       0.5377 2.6935 0.5377 1.0000 5.4435 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.0893
+Score:              3805.1440
+Weight:             0.0762
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.3476
+Gamma:              0.3957
+Gamma-Inv:          0.2567
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7523
+Alpha:              0.0843
+Alpha-P.Inv:        2.2610
+P.Inv-Alpha:        0.6901
+Frequencies:        0.2692 0.2063 0.1838 0.3407 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JC                 0      -350.4367      2314.8555         0.0000    0.7343
+       2  F81                3      -336.6950      2318.2126         3.3571    0.1371
+       3  JC+I               1      -348.1155      2320.4933         5.6378    0.0438
+       4  K80                1      -348.1655      2320.5934         5.7378    0.0417
+       5  JC+G4              1      -349.0785      2322.4193         7.5638    0.0167
+       6  HKY                4      -334.4151      2323.9330         9.0775    0.0078
+       7  F81+I              4      -334.4577      2324.0183         9.1627    0.0075
+       8  F81+G4             4      -335.3289      2325.7606        10.9051    0.0031
+       9  K80+I              2      -345.9071      2326.3568        11.5012    0.0023
+      10  TrNef              2      -346.1590      2326.8605        12.0050    0.0018
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JC
+lnL:                -350.4367
+Frequencies:        0.2500 0.2500 0.2500 0.2500
+Subst. Rates:       1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2314.8555
+Weight:             0.7343
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0542
+Gamma:              0.0211
+Gamma-Inv:          0.0006
+Frequencies:        0.1567
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.9106
+Alpha:              0.0215
+Alpha-P.Inv:        0.1849
+P.Inv-Alpha:        0.9122
+Frequencies:        0.2146 0.2010 0.1797 0.4047 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 000000 -f 0.25,0.25,0.25,0.25 -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCAT --JC69 -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model JC
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m JC
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+I              6      -330.8413       987.6826         0.0000    0.0985
+       2  HKY+I              5      -332.2453       988.4906         0.8081    0.0657
+       3  TIM3+I             7      -330.2915       988.5831         0.9005    0.0628
+       4  TIM2+I             7      -330.3881       988.7762         1.0936    0.0570
+       5  TIM1+I             7      -330.5150       989.0300         1.3475    0.0502
+       6  TrN+G4             6      -331.5176       989.0352         1.3526    0.0501
+       7  TPM1uf+I           6      -331.6632       989.3264         1.6438    0.0433
+       8  TrN+I+G4           7      -330.7047       989.4094         1.7269    0.0415
+       9  TrN                5      -332.8122       989.6243         1.9417    0.0373
+      10  HKY+I+G4           6      -331.9730       989.9461         2.2635    0.0318
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TrN+I
+lnL:                -330.8413
+Frequencies:        0.2178 0.1970 0.1826 0.4025
+Subst. Rates:       1.0000 0.0200 1.0000 1.0000 9.4306 1.0000 
+Inv. sites prop:    0.8991
+Gamma shape:        -
+Score:              987.6826
+Weight:             0.0985
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4567
+Gamma:              0.2058
+Gamma-Inv:          0.1852
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.9151
+Alpha:              0.0215
+Alpha-P.Inv:        12.1798
+P.Inv-Alpha:        0.8969
+Frequencies:        0.2164 0.1984 0.1821 0.4032 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN+I
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+I              6      -330.8413       988.6826         0.0000    0.0985
+       2  HKY+I              5      -332.2453       989.4906         0.8081    0.0657
+       3  TIM3+I             7      -330.2915       989.5831         0.9005    0.0628
+       4  TIM2+I             7      -330.3881       989.7762         1.0936    0.0570
+       5  TIM1+I             7      -330.5150       990.0300         1.3475    0.0502
+       6  TrN+G4             6      -331.5176       990.0352         1.3526    0.0501
+       7  TPM1uf+I           6      -331.6632       990.3264         1.6438    0.0433
+       8  TrN+I+G4           7      -330.7047       990.4094         1.7269    0.0415
+       9  TrN                5      -332.8122       990.6243         1.9417    0.0373
+      10  HKY+I+G4           6      -331.9730       990.9461         2.2635    0.0318
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TrN+I
+lnL:                -330.8413
+Frequencies:        0.2178 0.1970 0.1826 0.4025
+Subst. Rates:       1.0000 0.0200 1.0000 1.0000 9.4306 1.0000 
+Inv. sites prop:    0.8991
+Gamma shape:        -
+Score:              988.6826
+Weight:             0.0985
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4567
+Gamma:              0.2058
+Gamma-Inv:          0.1852
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.9151
+Alpha:              0.0215
+Alpha-P.Inv:        12.1798
+P.Inv-Alpha:        0.8969
+Frequencies:        0.2164 0.1984 0.1821 0.4032 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN+I
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  K80+I              2     -1273.3620      4181.2666         0.0000    0.8118
+       2  TrNef+I            3     -1270.2675      4185.3577         4.0911    0.1050
+       3  TPM3+I             3     -1271.6430      4188.1086         6.8420    0.0265
+       4  HKY+I              5     -1261.8971      4189.1772         7.9106    0.0155
+       5  TrNef+G4           3     -1272.6136      4190.0498         8.7832    0.0101
+       6  K80+G4             2     -1277.8676      4190.2776         9.0111    0.0090
+       7  K80+I+G4           3     -1272.8431      4190.5089         9.2423    0.0080
+       8  TPM1+I             3     -1273.5858      4191.9943        10.7277    0.0038
+       9  TrNef+I+G4         4     -1268.5518      4192.2065        10.9399    0.0034
+      10  TIM3ef+I           4     -1268.7993      4192.7013        11.4347    0.0027
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              K80+I
+lnL:                -1273.3620
+Frequencies:        0.2500 0.2500 0.2500 0.2500
+Subst. Rates:       1.0000 6.1804 1.0000 1.0000 6.1804 1.0000 
+Inv. sites prop:    0.8441
+Gamma shape:        -
+Score:              4181.2666
+Weight:             0.8118
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.9680
+Gamma:              0.0201
+Gamma-Inv:          0.0119
+Frequencies:        0.0172
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8447
+Alpha:              0.0217
+Alpha-P.Inv:        0.4641
+P.Inv-Alpha:        0.7638
+Frequencies:        0.2524 0.2170 0.2088 0.3219 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010010 -f 0.25,0.25,0.25,0.25 -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATI -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model K80+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m K80+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+I+G4           7     -1257.3445      2842.6890         0.0000    0.2837
+       2  TIM3+I+G4          8     -1256.5610      2843.1219         0.4329    0.2285
+       3  TIM2+I+G4          8     -1257.4042      2844.8084         2.1193    0.0983
+       4  TIM1+I+G4          8     -1257.6336      2845.2671         2.5781    0.0782
+       5  TrN+I              6     -1259.6491      2845.2981         2.6091    0.0770
+       6  TIM3+I             7     -1258.7512      2845.5024         2.8134    0.0695
+       7  TIM2+I             7     -1259.5158      2847.0316         4.3425    0.0323
+       8  GTR+I+G4          10     -1256.5306      2847.0612         4.3721    0.0319
+       9  HKY+I              5     -1261.8971      2847.7942         5.1052    0.0221
+      10  HKY+I+G4           6     -1261.2019      2848.4039         5.7148    0.0163
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TrN+I+G4
+lnL:                -1257.3445
+Frequencies:        0.2557 0.2128 0.2124 0.3191
+Subst. Rates:       1.0000 3.3816 1.0000 1.0000 17.9111 1.0000 
+Inv. sites prop:    0.7582
+Gamma shape:        0.3827
+Score:              2842.6890
+Weight:             0.2837
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2106
+Gamma:              0.0263
+Gamma-Inv:          0.7631
+Frequencies:        0.9996
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8448
+Alpha:              0.0218
+Alpha-P.Inv:        0.4570
+P.Inv-Alpha:        0.7759
+Frequencies:        0.2554 0.2139 0.2125 0.3182 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+I+G4           7     -1257.3445      2843.6890         0.0000    0.2837
+       2  TIM3+I+G4          8     -1256.5610      2844.1219         0.4329    0.2285
+       3  TIM2+I+G4          8     -1257.4042      2845.8084         2.1193    0.0983
+       4  TIM1+I+G4          8     -1257.6336      2846.2671         2.5781    0.0782
+       5  TrN+I              6     -1259.6491      2846.2981         2.6091    0.0770
+       6  TIM3+I             7     -1258.7512      2846.5024         2.8134    0.0695
+       7  TIM2+I             7     -1259.5158      2848.0316         4.3425    0.0323
+       8  GTR+I+G4          10     -1256.5306      2848.0612         4.3721    0.0319
+       9  HKY+I              5     -1261.8971      2848.7942         5.1052    0.0221
+      10  HKY+I+G4           6     -1261.2019      2849.4039         5.7148    0.0163
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TrN+I+G4
+lnL:                -1257.3445
+Frequencies:        0.2557 0.2128 0.2124 0.3191
+Subst. Rates:       1.0000 3.3816 1.0000 1.0000 17.9111 1.0000 
+Inv. sites prop:    0.7582
+Gamma shape:        0.3827
+Score:              2843.6890
+Weight:             0.2837
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2106
+Gamma:              0.0263
+Gamma-Inv:          0.7631
+Frequencies:        0.9996
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8448
+Alpha:              0.0218
+Alpha-P.Inv:        0.4570
+P.Inv-Alpha:        0.7759
+Frequencies:        0.2554 0.2139 0.2125 0.3182 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY                4      -297.1891      2249.4809         0.0000    0.7340
+       2  TrN                5      -293.6842      2252.7513         3.2704    0.1431
+       3  F81                3      -304.8427      2254.5080         5.0271    0.0594
+       4  K80                1      -316.0896      2256.4416         6.9607    0.0226
+       5  TPM2uf             5      -296.7206      2258.8242         9.3433    0.0069
+       6  JC                 0      -322.4609      2258.9040         9.4230    0.0066
+       7  TrNef              2      -312.2791      2259.1008         9.6199    0.0060
+       8  TPM3uf             5      -297.1372      2259.6574        10.1764    0.0045
+       9  HKY+G4             5      -297.1900      2259.7629        10.2819    0.0043
+      10  HKY+I              5      -297.1919      2259.7668        10.2859    0.0043
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY
+lnL:                -297.1891
+Frequencies:        0.3482 0.1559 0.1315 0.3643
+Subst. Rates:       1.0000 10.9310 1.0000 1.0000 10.9310 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2249.4809
+Weight:             0.7340
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0057
+Gamma:              0.0058
+Gamma-Inv:          0.0000
+Frequencies:        0.9638
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0229
+Alpha:              93.0019
+Alpha-P.Inv:        93.0765
+P.Inv-Alpha:        0.0219
+Frequencies:        0.3495 0.1548 0.1331 0.3626 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010010 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model HKY
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m HKY
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN                5      -293.6842       911.3684         0.0000    0.2028
+       2  TIM2               6      -293.3009       912.6019         1.2335    0.1094
+       3  TIM1               6      -293.5400       913.0800         1.7116    0.0862
+       4  TIM3               6      -293.5537       913.1074         1.7390    0.0850
+       5  TrN+G4             6      -293.6850       913.3701         2.0017    0.0745
+       6  TrN+I              6      -293.6880       913.3759         2.0075    0.0743
+       7  TIM2+G4            7      -293.1973       914.3947         3.0263    0.0447
+       8  TIM2+I             7      -293.2715       914.5431         3.1747    0.0415
+       9  TIM3+G4            7      -293.3709       914.7417         3.3734    0.0375
+      10  TIM3+I             7      -293.4192       914.8385         3.4701    0.0358
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TrN
+lnL:                -293.6842
+Frequencies:        0.3575 0.1471 0.1404 0.3549
+Subst. Rates:       1.0000 1.8523 1.0000 1.0000 16.0870 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              911.3684
+Weight:             0.2028
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1713
+Gamma:              0.2105
+Gamma-Inv:          0.0777
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0273
+Alpha:              92.4921
+Alpha-P.Inv:        92.7993
+P.Inv-Alpha:        0.0231
+Frequencies:        0.3572 0.1471 0.1402 0.3554 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN                5      -293.6842       912.3684         0.0000    0.2028
+       2  TIM2               6      -293.3009       913.6019         1.2335    0.1094
+       3  TIM1               6      -293.5400       914.0800         1.7116    0.0862
+       4  TIM3               6      -293.5537       914.1074         1.7390    0.0850
+       5  TrN+G4             6      -293.6850       914.3701         2.0017    0.0745
+       6  TrN+I              6      -293.6880       914.3759         2.0075    0.0743
+       7  TIM2+G4            7      -293.1973       915.3947         3.0263    0.0447
+       8  TIM2+I             7      -293.2715       915.5431         3.1747    0.0415
+       9  TIM3+G4            7      -293.3709       915.7417         3.3734    0.0375
+      10  TIM3+I             7      -293.4192       915.8385         3.4701    0.0358
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TrN
+lnL:                -293.6842
+Frequencies:        0.3575 0.1471 0.1404 0.3549
+Subst. Rates:       1.0000 1.8523 1.0000 1.0000 16.0870 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              912.3684
+Weight:             0.2028
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1713
+Gamma:              0.2105
+Gamma-Inv:          0.0777
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0273
+Alpha:              92.4921
+Alpha-P.Inv:        92.7993
+P.Inv-Alpha:        0.0231
+Frequencies:        0.3572 0.1471 0.1402 0.3554 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5      -705.5884      3076.5598         0.0000    0.5864
+       2  K80+I              2      -722.1903      3078.9230         2.3632    0.1799
+       3  HKY+G4             5      -706.9214      3079.2256         2.6658    0.1547
+       4  K80+G4             2      -724.0631      3082.6686         6.1088    0.0277
+       5  TPM1uf+I           6      -704.7447      3085.1524         8.5926    0.0080
+       6  TPM3uf+G4          6      -704.9659      3085.5948         9.0350    0.0064
+       7  TPM3uf+I           6      -705.1184      3085.8999         9.3401    0.0055
+       8  TPM1uf+G4          6      -705.2675      3086.1982         9.6383    0.0047
+       9  TPM2uf+I           6      -705.3026      3086.2682         9.7084    0.0046
+      10  TrN+I              6      -705.6858      3087.0346        10.4748    0.0031
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+I
+lnL:                -705.5884
+Frequencies:        0.3048 0.2058 0.1598 0.3295
+Subst. Rates:       1.0000 21.6041 1.0000 1.0000 21.6041 1.0000 
+Inv. sites prop:    0.7893
+Gamma shape:        -
+Score:              3076.5598
+Weight:             0.5864
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.7954
+Gamma:              0.2010
+Gamma-Inv:          0.0036
+Frequencies:        0.7794
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7922
+Alpha:              0.0221
+Alpha-P.Inv:        2.5385
+P.Inv-Alpha:        0.7645
+Frequencies:        0.3046 0.2060 0.1596 0.3299 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model HKY+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m HKY+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5      -705.5884      1735.1769         0.0000    0.1203
+       2  TPM1uf+I           6      -704.7447      1735.4894         0.3125    0.1029
+       3  TPM3uf+G4          6      -704.9659      1735.9318         0.7549    0.0825
+       4  TPM3uf+I           6      -705.1184      1736.2368         1.0600    0.0708
+       5  TPM1uf+G4          6      -705.2675      1736.5351         1.3582    0.0610
+       6  TPM2uf+I           6      -705.3026      1736.6051         1.4282    0.0589
+       7  TVM+I              8      -703.6145      1737.2289         2.0520    0.0431
+       8  TIM2+I             7      -704.6754      1737.3509         2.1740    0.0406
+       9  TrN+I              6      -705.6858      1737.3715         2.1947    0.0401
+      10  HKY+I+G4           6      -705.7757      1737.5515         2.3746    0.0367
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HKY+I
+lnL:                -705.5884
+Frequencies:        0.3048 0.2058 0.1598 0.3295
+Subst. Rates:       1.0000 21.6041 1.0000 1.0000 21.6041 1.0000 
+Inv. sites prop:    0.7893
+Gamma shape:        -
+Score:              1735.1769
+Weight:             0.1203
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.5396
+Gamma:              0.2945
+Gamma-Inv:          0.1659
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8034
+Alpha:              0.0215
+Alpha-P.Inv:        27.5912
+P.Inv-Alpha:        0.7547
+Frequencies:        0.3043 0.2068 0.1599 0.3291 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model HKY+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m HKY+I
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I              5      -705.5884      1736.1769         0.0000    0.1203
+       2  TPM1uf+I           6      -704.7447      1736.4894         0.3125    0.1029
+       3  TPM3uf+G4          6      -704.9659      1736.9318         0.7549    0.0825
+       4  TPM3uf+I           6      -705.1184      1737.2368         1.0600    0.0708
+       5  TPM1uf+G4          6      -705.2675      1737.5351         1.3582    0.0610
+       6  TPM2uf+I           6      -705.3026      1737.6051         1.4282    0.0589
+       7  TVM+I              8      -703.6145      1738.2289         2.0520    0.0431
+       8  TIM2+I             7      -704.6754      1738.3509         2.1740    0.0406
+       9  TrN+I              6      -705.6858      1738.3715         2.1947    0.0401
+      10  HKY+I+G4           6      -705.7757      1738.5515         2.3746    0.0367
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HKY+I
+lnL:                -705.5884
+Frequencies:        0.3048 0.2058 0.1598 0.3295
+Subst. Rates:       1.0000 21.6041 1.0000 1.0000 21.6041 1.0000 
+Inv. sites prop:    0.7893
+Gamma shape:        -
+Score:              1736.1769
+Weight:             0.1203
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.5396
+Gamma:              0.2945
+Gamma-Inv:          0.1659
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8034
+Alpha:              0.0215
+Alpha-P.Inv:        27.5912
+P.Inv-Alpha:        0.7547
+Frequencies:        0.3043 0.2068 0.1599 0.3291 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010010 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model HKY+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m HKY+I
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+I+G4           7      -808.2092      3302.3616         0.0000    0.5219
+       2  TrNef+I+G4         4      -823.7475      3302.5978         0.2362    0.4637
+       3  TIM1ef+I+G4        5      -823.1590      3311.7010         9.3393    0.0049
+       4  TIM3ef+I+G4        5      -823.4622      3312.3073         9.9456    0.0036
+       5  TIM2+I+G4          8      -808.4426      3313.1085        10.7468    0.0024
+       6  TIM3+I+G4          8      -809.0698      3314.3629        12.0012    0.0013
+       7  TPM3uf+I+G4        7      -814.7770      3315.4972        13.1356    0.0007
+       8  TIM1+I+G4          8      -809.9669      3316.1571        13.7955    0.0005
+       9  TPM1uf+I+G4        7      -815.7608      3317.4649        15.1032    0.0003
+      10  TIM2ef+I+G4        5      -826.3121      3318.0072        15.6455    0.0002
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TrN+I+G4
+lnL:                -808.2092
+Frequencies:        0.2818 0.1738 0.1926 0.3518
+Subst. Rates:       1.0000 2.4566 1.0000 1.0000 59.4762 1.0000 
+Inv. sites prop:    0.7619
+Gamma shape:        0.1835
+Score:              3302.3616
+Weight:             0.5219
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        0.5272
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8112
+Alpha:              0.0694
+Alpha-P.Inv:        0.1852
+P.Inv-Alpha:        0.7621
+Frequencies:        0.2818 0.1739 0.1926 0.3518 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10      -802.7695      1939.5391         0.0000    0.8835
+       2  TrN+I+G4           7      -808.2092      1944.4184         4.8793    0.0770
+       3  TIM2+I+G4          8      -808.4426      1946.8851         7.3460    0.0224
+       4  TIM3+I+G4          8      -809.0698      1948.1395         8.6004    0.0120
+       5  TIM1+I+G4          8      -809.9669      1949.9338        10.3947    0.0049
+       6  TPM3uf+I+G4        7      -814.7770      1957.5540        18.0149    0.0001
+       7  TPM1uf+I+G4        7      -815.7608      1959.5217        19.9826    0.0000
+       8  TVM+I+G4           9      -814.3583      1960.7165        21.1774    0.0000
+       9  SYM+I+G4           7      -816.9695      1961.9391        22.4000    0.0000
+      10  TrNef+I+G4         4      -823.7475      1969.4950        29.9560    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -802.7695
+Frequencies:        0.2820 0.1848 0.1887 0.3444
+Subst. Rates:       0.0200 2.4739 0.6712 1.1781 46.8158 1.0000 
+Inv. sites prop:    0.8020
+Gamma shape:        0.3535
+Score:              1939.5391
+Weight:             0.8835
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8020
+Alpha:              0.1123
+Alpha-P.Inv:        0.3364
+P.Inv-Alpha:        0.7980
+Frequencies:        0.2820 0.1835 0.1892 0.3453 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10      -802.7695      1940.5391         0.0000    0.8835
+       2  TrN+I+G4           7      -808.2092      1945.4184         4.8793    0.0770
+       3  TIM2+I+G4          8      -808.4426      1947.8851         7.3460    0.0224
+       4  TIM3+I+G4          8      -809.0698      1949.1395         8.6004    0.0120
+       5  TIM1+I+G4          8      -809.9669      1950.9338        10.3947    0.0049
+       6  TPM3uf+I+G4        7      -814.7770      1958.5540        18.0149    0.0001
+       7  TPM1uf+I+G4        7      -815.7608      1960.5217        19.9826    0.0000
+       8  TVM+I+G4           9      -814.3583      1961.7165        21.1774    0.0000
+       9  SYM+I+G4           7      -816.9695      1962.9391        22.4000    0.0000
+      10  TrNef+I+G4         4      -823.7475      1970.4950        29.9560    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -802.7695
+Frequencies:        0.2820 0.1848 0.1887 0.3444
+Subst. Rates:       0.0200 2.4739 0.6712 1.1781 46.8158 1.0000 
+Inv. sites prop:    0.8020
+Gamma shape:        0.3535
+Score:              1940.5391
+Weight:             0.8835
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8020
+Alpha:              0.1123
+Alpha-P.Inv:        0.3364
+P.Inv-Alpha:        0.7980
+Frequencies:        0.2820 0.1835 0.1892 0.3453 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model GTR+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTR+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+I             7     -2490.1292      6666.2016         0.0000    0.3387
+       2  TrN+I              6     -2495.4590      6666.5811         0.3795    0.2802
+       3  HKY+I              5     -2501.2037      6667.7903         1.5886    0.1531
+       4  TrN+I+G4           7     -2490.9300      6667.8031         1.6015    0.1521
+       5  TIM2+I+G4          8     -2487.5805      6671.3843         5.1827    0.0254
+       6  HKY+I+G4           6     -2498.1777      6672.0184         5.8167    0.0185
+       7  TIM1+I             7     -2493.6209      6673.1849         6.9833    0.0103
+       8  TPM2uf+I           6     -2499.3465      6674.3561         8.1545    0.0057
+       9  TIM1+I+G4          8     -2489.5783      6675.3799         9.1782    0.0034
+      10  TPM1uf+I           6     -2499.8784      6675.4198         9.2182    0.0034
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TIM2+I
+lnL:                -2490.1292
+Frequencies:        0.3262 0.2443 0.2149 0.2146
+Subst. Rates:       4.9035 20.7459 4.9035 1.0000 99.9734 1.0000 
+Inv. sites prop:    0.8293
+Gamma shape:        -
+Score:              6666.2016
+Weight:             0.3387
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.7955
+Gamma:              0.0004
+Gamma-Inv:          0.2042
+Frequencies:        0.9982
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8372
+Alpha:              0.0217
+Alpha-P.Inv:        0.7618
+P.Inv-Alpha:        0.7864
+Frequencies:        0.3266 0.2456 0.2122 0.2157 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v e -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+I
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+I
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+I+G4          8     -2487.5805      5305.1610         0.0000    0.4442
+       2  GTR+I+G4          10     -2486.0339      5306.0679         0.9069    0.2823
+       3  TIM2+I             7     -2490.1292      5308.2584         3.0975    0.0944
+       4  TIM1+I+G4          8     -2489.5783      5309.1565         3.9956    0.0603
+       5  TIM3+I+G4          8     -2489.7315      5309.4630         4.3020    0.0517
+       6  TrN+I+G4           7     -2490.9300      5309.8599         4.6990    0.0424
+       7  GTR+I              9     -2489.7136      5311.4272         6.2662    0.0194
+       8  TIM1+I             7     -2493.6209      5315.2417        10.0808    0.0029
+       9  TrN+I              6     -2495.4590      5316.9181        11.7571    0.0012
+      10  TIM3+I             7     -2495.3712      5318.7425        13.5815    0.0005
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM2+I+G4
+lnL:                -2487.5805
+Frequencies:        0.3256 0.2456 0.2140 0.2148
+Subst. Rates:       4.0399 20.7678 4.0399 1.0000 79.5378 1.0000 
+Inv. sites prop:    0.7879
+Gamma shape:        0.8846
+Score:              5305.1610
+Weight:             0.4442
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1184
+Gamma:              0.0000
+Gamma-Inv:          0.8815
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8296
+Alpha:              0.0217
+Alpha-P.Inv:        0.9653
+P.Inv-Alpha:        0.8008
+Frequencies:        0.3263 0.2457 0.2140 0.2140 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+I+G4          8     -2487.5805      5306.1610         0.0000    0.4442
+       2  GTR+I+G4          10     -2486.0339      5307.0679         0.9069    0.2823
+       3  TIM2+I             7     -2490.1292      5309.2584         3.0975    0.0944
+       4  TIM1+I+G4          8     -2489.5783      5310.1565         3.9956    0.0603
+       5  TIM3+I+G4          8     -2489.7315      5310.4630         4.3020    0.0517
+       6  TrN+I+G4           7     -2490.9300      5310.8599         4.6990    0.0424
+       7  GTR+I              9     -2489.7136      5312.4272         6.2662    0.0194
+       8  TIM1+I             7     -2493.6209      5316.2417        10.0808    0.0029
+       9  TrN+I              6     -2495.4590      5317.9181        11.7571    0.0012
+      10  TIM3+I             7     -2495.3712      5319.7425        13.5815    0.0005
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM2+I+G4
+lnL:                -2487.5805
+Frequencies:        0.3256 0.2456 0.2140 0.2148
+Subst. Rates:       4.0399 20.7678 4.0399 1.0000 79.5378 1.0000 
+Inv. sites prop:    0.7879
+Gamma shape:        0.8846
+Score:              5306.1610
+Weight:             0.4442
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1184
+Gamma:              0.0000
+Gamma-Inv:          0.8815
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8296
+Alpha:              0.0217
+Alpha-P.Inv:        0.9653
+P.Inv-Alpha:        0.8008
+Frequencies:        0.3263 0.2457 0.2140 0.2140 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010232 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TIM2+I+G4
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TIM2+I+G4
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  JC                 0      -182.7874      1979.5570         0.0000    0.8951
+       2  K80                1      -179.9689      1984.2002         4.6431    0.0878
+       3  JC+G4              1      -182.7876      1989.8376        10.2806    0.0052
+       4  JC+I               1      -182.7880      1989.8383        10.2813    0.0052
+       5  TrNef              2      -178.2189      1990.9803        11.4232    0.0030
+       6  TPM1               2      -179.5550      1993.6524        14.0954    0.0008
+       7  TPM2               2      -179.5708      1993.6840        14.1270    0.0008
+       8  TPM3               2      -179.5985      1993.7394        14.1824    0.0007
+       9  K80+G4             2      -179.9691      1994.4808        14.9238    0.0005
+      10  K80+I              2      -179.9695      1994.4815        14.9245    0.0005
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              JC
+lnL:                -182.7874
+Frequencies:        0.2500 0.2500 0.2500 0.2500
+Subst. Rates:       1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              1979.5570
+Weight:             0.8951
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0058
+Gamma:              0.0058
+Gamma-Inv:          0.0000
+Frequencies:        0.0002
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0213
+Alpha:              93.2956
+Alpha-P.Inv:        93.2953
+P.Inv-Alpha:        0.0213
+Frequencies:        0.2922 0.1825 0.1578 0.3675 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 000000 -f 0.25,0.25,0.25,0.25 -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCAT --JC69 -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model JC
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m JC
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN                5      -171.3765       666.7529         0.0000    0.1321
+       2  HKY                4      -172.9550       667.9101         1.1572    0.0740
+       3  TIM2               6      -171.1904       668.3808         1.6279    0.0585
+       4  TIM3               6      -171.2646       668.5291         1.7762    0.0543
+       5  TIM1               6      -171.2685       668.5370         1.7841    0.0541
+       6  TrN+G4             6      -171.3771       668.7542         2.0013    0.0485
+       7  TrN+I              6      -171.3780       668.7561         2.0032    0.0485
+       8  TPM1uf             5      -172.5056       669.0111         2.2582    0.0427
+       9  TPM2uf             5      -172.5105       669.0210         2.2680    0.0425
+      10  TPM3uf             5      -172.5710       669.1421         2.3892    0.0400
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TrN
+lnL:                -171.3765
+Frequencies:        0.2976 0.1770 0.1615 0.3640
+Subst. Rates:       1.0000 0.0200 1.0000 1.0000 17.3786 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              666.7529
+Weight:             0.1321
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1958
+Gamma:              0.1978
+Gamma-Inv:          0.0705
+Frequencies:        0.9806
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0214
+Alpha:              93.1187
+Alpha-P.Inv:        93.1348
+P.Inv-Alpha:        0.0213
+Frequencies:        0.2961 0.1785 0.1596 0.3657 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN                5      -171.3765       667.7529         0.0000    0.1321
+       2  HKY                4      -172.9550       668.9101         1.1572    0.0740
+       3  TIM2               6      -171.1904       669.3808         1.6279    0.0585
+       4  TIM3               6      -171.2646       669.5291         1.7762    0.0543
+       5  TIM1               6      -171.2685       669.5370         1.7841    0.0541
+       6  TrN+G4             6      -171.3771       669.7542         2.0013    0.0485
+       7  TrN+I              6      -171.3780       669.7561         2.0032    0.0485
+       8  TPM1uf             5      -172.5056       670.0111         2.2582    0.0427
+       9  TPM2uf             5      -172.5105       670.0210         2.2680    0.0425
+      10  TPM3uf             5      -172.5710       670.1421         2.3892    0.0400
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TrN
+lnL:                -171.3765
+Frequencies:        0.2976 0.1770 0.1615 0.3640
+Subst. Rates:       1.0000 0.0200 1.0000 1.0000 17.3786 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              667.7529
+Weight:             0.1321
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1958
+Gamma:              0.1978
+Gamma-Inv:          0.0705
+Frequencies:        0.9806
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0214
+Alpha:              93.1187
+Alpha-P.Inv:        93.1348
+P.Inv-Alpha:        0.0213
+Frequencies:        0.2961 0.1785 0.1596 0.3657 
+
+Commands:
+  > phyml  -i phylogeny/SARS-CoV-2_200328.aln.concat.fna -m 010020 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa phylogeny/SARS-CoV-2_200328.aln.concat.fna --model TrN
+  > paup -s phylogeny/SARS-CoV-2_200328.aln.concat.fna
+  > iqtree -s phylogeny/SARS-CoV-2_200328.aln.concat.fna -m TrN
+Done
