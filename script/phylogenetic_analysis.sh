@@ -6,7 +6,7 @@
 #########################
 # Settings for analyses #
 #########################
-analysis_prefix="SARS-CoV-2_200328"
+analysis_prefix="SARS-CoV-2_200331"
 orf_reference_prefix="ref/MN908947.orf"
 model_type="bic"
 out_group="MG772933.1"
